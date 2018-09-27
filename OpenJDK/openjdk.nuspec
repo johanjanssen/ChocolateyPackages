@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>    
+    <id>openjdk</id>
+	<version>11.0</version>
+    <title>OpenJDK</title>
+    <authors>Oracle</authors>
+    <projectUrl>http://openjdk.java.net/</projectUrl>
+    <tags>openjdk java jvm</tags>
+    <summary>OpenJDK is an open source Java Development Kit provided by Oracle</summary>
+    <description>OpenJDK is an open source Java Development Kit provided by Oracle</description>
+  </metadata>
+</package>

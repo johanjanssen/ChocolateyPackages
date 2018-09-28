@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>    
+    <id>wildfly</id>
+	<version>14.0.1</version>
+	<packageSourceUrl>https://github.com/johanjanssen/ChocolateyPackages/tree/master/WildFly</packageSourceUrl>
+    <title>WildFly</title>
+    <authors>Red Hat</authors>
+    <projectUrl>http://wildfly.org/</projectUrl>
+    <tags>wildfly java jvm</tags>
+    <summary>WildFly is an open source Java EE application server provided by Red Hat</summary>
+    <description>WildFly is an open source Java EE application server provided by Red Hat</description>
+  </metadata>
+</package>

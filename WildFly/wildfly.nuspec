@@ -6,6 +6,8 @@
 	<packageSourceUrl>https://github.com/johanjanssen/ChocolateyPackages/tree/master/WildFly</packageSourceUrl>
     <title>WildFly</title>
     <authors>Red Hat</authors>
+	<owners>JohanJanssen</owners>
+	<licenseUrl>https://github.com/wildfly/wildfly/blob/master/LICENSE.txt</licenseUrl>
     <projectUrl>http://wildfly.org/</projectUrl>
     <tags>wildfly java jvm</tags>
     <summary>WildFly is an open source Java EE application server provided by Red Hat</summary>

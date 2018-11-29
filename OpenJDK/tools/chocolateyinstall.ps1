@@ -7,30 +7,28 @@ $checksum64  = '289dd06e06c2cbd5e191f2d227c9338e88b6963fd0c75bceb9be48f0394ede21
 #-------------------------------------------------------------------------------
 # begin migration
 
-if (! (Get-Command -Name Uninstall-ChocolateyPath -ErrorAction SilentlyContinue)) {
-    function Uninstall-ChocolateyPath {
-        param(
-            [parameter(Mandatory=$true, Position=0)][string] $pathToUninstall,
-            [parameter(Mandatory=$false, Position=1)][EnvironmentVariableTarget] $pathType = [EnvironmentVariableTarget]::User
-        )
-        if ($env:PATH.ToLower().Contains($pathToUnInstall.ToLower())) {
-            $statementTerminator = ';'
-            Write-Host "PATH environment variable contains $pathToUnInstall. Removing..."
-            [Collections.ArrayList]$actualPath = (Get-EnvironmentVariable -Name 'Path' -Scope $pathType -PreserveVariables).Split($statementTerminator)
+function Uninstall-MyChocolateyPath {
+    param(
+        [parameter(Mandatory=$true, Position=0)][string] $pathToUninstall,
+        [parameter(Mandatory=$false, Position=1)][EnvironmentVariableTarget] $pathType = [EnvironmentVariableTarget]::User
+    )
+    if ($env:PATH.ToLower().Contains($pathToUnInstall.ToLower())) {
+        $statementTerminator = ';'
+        Write-Host "PATH environment variable contains $pathToUnInstall. Removing..."
+        [Collections.ArrayList]$actualPath = (Get-EnvironmentVariable -Name 'Path' -Scope $pathType -PreserveVariables).Split($statementTerminator)
 
-            $actualPath.Remove($pathToUnInstall)
-            $newPath = $actualPath -Join $statementTerminator
+        $actualPath.Remove($pathToUnInstall)
+        $newPath = $actualPath -Join $statementTerminator
 
-            if ($pathType -eq [EnvironmentVariableTarget]::Machine) {
-                if (Test-ProcessAdminRights) {
-                    Set-EnvironmentVariable -Name 'Path' -Value $newPath -Scope $pathType
-                } else {
-                    $psArgs = "UnInstall-ChocolateyPath -pathToUnInstall `'$originalPathToUnInstall`' -pathType `'$pathType`'"
-                    Start-ChocolateyProcessAsAdmin "$psArgs"
-                }
-            } else {
+        if ($pathType -eq [EnvironmentVariableTarget]::Machine) {
+            if (Test-ProcessAdminRights) {
                 Set-EnvironmentVariable -Name 'Path' -Value $newPath -Scope $pathType
+            } else {
+                $psArgs = "UnInstall-ChocolateyPath -pathToUnInstall `'$originalPathToUnInstall`' -pathType `'$pathType`'"
+                Start-ChocolateyProcessAsAdmin "$psArgs"
             }
+        } else {
+            Set-EnvironmentVariable -Name 'Path' -Value $newPath -Scope $pathType
         }
     }
 }
@@ -39,8 +37,8 @@ if (Test-Path -Path $legacyDir -ErrorAction SilentlyContinue) {
     Write-Debug "Removing legacy installation: $legacyDir"
     Remove-Item -Recurse -Force -Path $legacyDir
     $pathType = [EnvironmentVariableTarget]::Machine
-    Uninstall-ChocolateyPath -PathToUninstall "$legacyDir\jdk-11\bin" -PathType $pathType
-    Uninstall-ChocolateyPath -PathToUninstall "$legacyDir\jdk-11.0.1\bin" -PathType $pathType
+    Uninstall-MyChocolateyPath -PathToUninstall "$legacyDir\jdk-11\bin" -PathType $pathType
+    Uninstall-MyChocolateyPath -PathToUninstall "$legacyDir\jdk-11.0.1\bin" -PathType $pathType
 }
 
 # end migration

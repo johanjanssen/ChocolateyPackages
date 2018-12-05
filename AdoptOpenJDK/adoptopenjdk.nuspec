@@ -2,12 +2,12 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>    
     <id>adoptopenjdk</id>
-	<version>11.28</version>
+	<version>8.192</version>
 	<packageSourceUrl>https://github.com/johanjanssen/ChocolateyPackages/tree/master/AdoptOpenJDK</packageSourceUrl>
     <title>AdoptOpenJDK</title>
     <authors>AdoptOpenJDK</authors>
 	<owners>JohanJanssen</owners>
-	<licenseUrl>https://github.com/AdoptOpenJDK/openjdk-jdk11/blob/master/LICENSE</licenseUrl>
+	<licenseUrl>https://github.com/AdoptOpenJDK/openjdk-jdk8u/blob/master/LICENSE</licenseUrl>
     <projectUrl>https://adoptopenjdk.net/</projectUrl>
     <tags>openjdk java jvm</tags>
     <summary>AdoptOpenJDK provides prebuilt OpenJDK build binaries. This one uses Hotspot.</summary>

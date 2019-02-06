@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>    
+    <id>adoptopenjdk8</id>
+	<version>8.202</version>
+	<packageSourceUrl>https://github.com/johanjanssen/ChocolateyPackages/tree/master/AdoptOpenJDK8</packageSourceUrl>
+    <title>AdoptOpenJDK8</title>
+    <authors>AdoptOpenJDK</authors>
+	<owners>JohanJanssen</owners>
+	<licenseUrl>https://github.com/AdoptOpenJDK/openjdk-jdk8u/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://adoptopenjdk.net/</projectUrl>
+    <tags>openjdk java jvm</tags>
+    <summary>AdoptOpenJDK provides prebuilt OpenJDK build binaries. This one uses Hotspot.</summary>
+    <description>AdoptOpenJDK provides prebuilt OpenJDK build binaries. This one uses Hotspot.</description>
+  </metadata>
+</package>

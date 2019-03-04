@@ -1,6 +1,6 @@
 ﻿$packageName = $env:ChocolateyPackageName
 $targetDir   = 'C:\Program Files\WildFly'
-$url         = 'http://download.jboss.org/wildfly/14.0.1.Final/wildfly-14.0.1.Final.zip'
-$checksum    = 'a6bafc5c8c6c148648d9229c2066f041f8dc656c'
+$url         = 'https://download.jboss.org/wildfly/16.0.0.Final/wildfly-16.0.0.Final.zip'
+$checksum    = 'b55ed374ab4f8534c2343ac9a283c71fa6d22dfe'
 
 Install-ChocolateyZipPackage $packageName $url $targetDir

@@ -3,7 +3,7 @@
   <metadata>    
     <id>adoptopenjdk11</id>
 	<version>11.0.2.9</version>
-	<packageSourceUrl>https://github.com/johanjanssen/ChocolateyPackages/tree/master/AdoptOpenJDK</packageSourceUrl>
+	<packageSourceUrl>https://github.com/johanjanssen/ChocolateyPackages/tree/master/AdoptOpenJDK11</packageSourceUrl>
     <title>AdoptOpenJDK11</title>
     <authors>AdoptOpenJDK</authors>
 	<owners>JohanJanssen</owners>

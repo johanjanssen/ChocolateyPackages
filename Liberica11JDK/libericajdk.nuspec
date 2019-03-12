@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>    
+    <id>liberica11jdk</id>
+	<version>11.0.2</version>
+	<packageSourceUrl>https://github.com/johanjanssen/ChocolateyPackages/tree/master/Liberica</packageSourceUrl>
+    <title>Liberica11JDK</title>
+    <authors>BellSoft</authors>
+	<owners>JohanJanssen</owners>
+	<licenseUrl>https://github.com/bell-sw/Liberica/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://bell-sw.com/</projectUrl>
+    <tags>liberica java jvm</tags>
+    <summary>Liberica is an open source Java Development Kit provided by BellSoft</summary>
+    <description>Liberica is an open source Java Development Kit provided by BellSoft</description>
+  </metadata>
+</package>

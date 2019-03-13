@@ -3,7 +3,7 @@
   <metadata>    
     <id>liberica11jdk</id>
 	<version>11.0.2</version>
-	<packageSourceUrl>https://github.com/johanjanssen/ChocolateyPackages/tree/master/Liberica</packageSourceUrl>
+	<packageSourceUrl>https://github.com/johanjanssen/ChocolateyPackages/tree/master/Liberica11JDK</packageSourceUrl>
     <title>Liberica11JDK</title>
     <authors>BellSoft</authors>
 	<owners>JohanJanssen</owners>

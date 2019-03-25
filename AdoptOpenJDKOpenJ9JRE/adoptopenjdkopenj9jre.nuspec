@@ -10,7 +10,7 @@
 	<licenseUrl>https://github.com/AdoptOpenJDK/openjdk-jdk11/blob/master/LICENSE</licenseUrl>
     <projectUrl>https://adoptopenjdk.net/</projectUrl>
     <tags>openjdk java jvm</tags>
-    <summary>AdoptOpenJDK provides prebuilt OpenJDK build binaries. This one uses Hotspot.</summary>
-    <description>AdoptOpenJDK provides prebuilt OpenJDK build binaries. This one uses Hotspot.</description>
+    <summary>AdoptOpenJDK provides prebuilt OpenJDK build binaries. This one uses OpenJ9.</summary>
+    <description>AdoptOpenJDK provides prebuilt OpenJDK build binaries. This one uses OpenJ9.</description>
   </metadata>
 </package>

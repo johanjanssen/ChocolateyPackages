@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>    
+    <id>sapmachine</id>
+	<version>11.0.2</version>
+	<packageSourceUrl>https://github.com/johanjanssen/ChocolateyPackages/tree/master/SapMachine11</packageSourceUrl>
+    <title>SapMachine</title>
+    <authors>SAP</authors>
+	<owners>JohanJanssen</owners>
+	<licenseUrl>https://github.com/SAP/SapMachine/blob/sapmachine/LICENSE</licenseUrl>
+    <projectUrl>https://sap.github.io/SapMachine/</projectUrl>
+    <tags>openjdk java jvm</tags>
+    <summary>SapMachine is an open source Java Development Kit provided by SAP</summary>
+    <description>SapMachine is an open source Java Development Kit provided by SAP</description>
+  </metadata>
+</package>

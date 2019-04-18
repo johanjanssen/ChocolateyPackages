@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>    
     <id>adoptopenjdk8</id>
-	<version>8.202</version>
+	<version>8.212</version>
 	<packageSourceUrl>https://github.com/johanjanssen/ChocolateyPackages/tree/master/AdoptOpenJDK8</packageSourceUrl>
     <title>AdoptOpenJDK8</title>
     <authors>AdoptOpenJDK</authors>

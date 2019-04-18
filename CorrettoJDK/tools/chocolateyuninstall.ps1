@@ -1,7 +1,7 @@
 ﻿Uninstall-ChocolateyEnvironmentVariable 'JAVA_HOME' 'Machine'
-rm -r 'C:\Program Files\Corretto\jdk11.0.2_9'
+rm -r 'C:\Program Files\Corretto\jdk11.0.3_7'
 
-$pathToUnInstall = 'C:\Program Files\Corretto\jdk11.0.2_9\bin'
+$pathToUnInstall = 'C:\Program Files\Corretto\jdk11.0.3_7\bin'
 $pathType = 'Machine'
 
 if ($env:PATH.ToLower().Contains($pathToUnInstall.ToLower()))

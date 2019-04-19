@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>    
+    <id>openjdk11redhatbuild</id>
+	<version>11.0.3</version>
+	<packageSourceUrl>https://github.com/johanjanssen/ChocolateyPackages/tree/master/OpenJDK11RedHatBuild</packageSourceUrl>
+    <title>OpenJDK11RedHatBuild</title>
+    <authors>Red Hat</authors>
+	<owners>JohanJanssen</owners>
+	<licenseUrl>https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://adoptopenjdk.net/upstream.html</projectUrl>
+    <tags>openjdk java jvm</tags>
+    <summary>OpenJDK is an open source Java Development Kit provided by Oracle. These binaries are build by Red Hat op behalf of OpenJDK.</summary>
+    <description>OpenJDK is an open source Java Development Kit provided by Oracle. These binaries are build by Red Hat op behalf of OpenJDK.</description>
+  </metadata>
+</package>

@@ -1,7 +1,7 @@
 ﻿Uninstall-ChocolateyEnvironmentVariable 'JAVA_HOME' 'Machine'
-rm -r 'C:\Program Files\SapMachine\sapmachine-11.0.2'
+rm -r 'C:\Program Files\SapMachine\sapmachine-jdk-11.0.3'
 
-$pathToUnInstall = 'C:\Program Files\SapMachine\sapmachine-11.0.2\bin'
+$pathToUnInstall = 'C:\Program Files\SapMachine\sapmachine-jdk-11.0.3\bin'
 $pathType = 'Machine'
 
 if ($env:PATH.ToLower().Contains($pathToUnInstall.ToLower()))

@@ -1,0 +1,9 @@
+# https://docs.travis-ci.com/user/reference/windows/
+os: windows
+language: bash  # language: java is not yet supported on Travis CI Windows
+matrix:
+  include:
+    - install: choco install adoptopenjdk8
+    - install: choco install adoptopenjdk11
+    - install: choco install adoptopenjdk
+script: java -version

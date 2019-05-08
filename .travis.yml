@@ -4,6 +4,9 @@ language: bash  # language: java is not yet supported on Travis CI Windows
 matrix:
   include:
     - install: choco install adoptopenjdk8
+      env: PATH="/c/Program Files/AdoptOpenJDK/jdk8u212-b03/bin:$PATH"
     - install: choco install adoptopenjdk11
+      env: PATH="/c/Program Files/AdoptOpenJDK/jdk-11.0.3+7/bin:$PATH"
     - install: choco install adoptopenjdk
+      env: PATH="/c/Program Files/AdoptOpenJDK/jdk-12+33/bin:$PATH"
 script: java -version

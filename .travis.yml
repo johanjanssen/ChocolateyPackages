@@ -16,6 +16,6 @@ matrix:
     - name: "AdoptOpenJDK"
       install: choco install adoptopenjdk
       env: PATH="/c/Program Files/AdoptOpenJDK/jdk-12+33/bin:$PATH"
-      - name: "AdoptOpenJDKJRE"
+    - name: "AdoptOpenJDKJRE"
       install: choco install adoptopenjdkjre
 script: java -version

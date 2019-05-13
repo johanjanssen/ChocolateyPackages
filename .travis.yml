@@ -23,4 +23,5 @@ matrix:
       #env: PATH="/c/Program Files/AdoptOpenJDK/jdk-12+33-jre/bin:$PATH"
 script:
   - powershell 'refreshenv; $Env:Path; java -version'
+  - cmd.exe /C 'echo %PATH%'
   

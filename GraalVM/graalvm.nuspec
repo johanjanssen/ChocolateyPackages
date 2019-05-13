@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>    
+    <id>graalvm</id>
+	<version>19.0.0</version>
+	<packageSourceUrl>https://github.com/johanjanssen/ChocolateyPackages/tree/master/GraalVM</packageSourceUrl>
+    <title>GraalVM</title>
+    <authors>Oracle</authors>
+	<owners>JohanJanssen</owners>
+	<licenseUrl>https://github.com/oracle/graal/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://www.graalvm.org/</projectUrl>
+    <tags>openjdk java jvm</tags>
+    <summary>GraalVM is a virtual machine to run applications in different programming languages such as Java, Scala, Kotlin, JavaScript, Python, C, C++ and many more</summary>
+    <description>GraalVM is a virtual machine to run applications in different programming languages such as Java, Scala, Kotlin, JavaScript, Python, C, C++ and many more</description>
+  </metadata>
+</package>

@@ -23,52 +23,52 @@ matrix:
       env: PATH="/c/Program Files/AdoptOpenJDK/jdk-12+33-jre/bin:$PATH"
     - name: "AdoptOpenJDKOpenJ9JDK"
       install: choco install adoptopenjdkopenj9jdk
-      env: PATH="/c/Program Files/AdoptOpenJDKOpenJ9JDK/jdk-12+33-jre/bin:$PATH"
+      env: PATH="/c/Program Files/AdoptOpenJDKOpenJ9JDK/????/bin:$PATH"
     - name: "AdoptOpenJDKOpenJ9JRE"
       install: choco install adoptopenjdkopenj9jre
-      env: PATH="/c/Program Files/AdoptOpenJDKOpenJ9JRE/jdk-12+33-jre/bin:$PATH"
+      env: PATH="/c/Program Files/AdoptOpenJDKOpenJ9JRE/????/bin:$PATH"
     - name: "Corretto11JDK"
       install: choco install corretto11jdk
-      env: PATH="/c/Program Files/Corretto11JDK/jdk-12+33-jre/bin:$PATH"
+      env: PATH="/c/Program Files/Corretto11JDK/????/bin:$PATH"
     - name: "Corretto8JDK"
       install: choco install corretto8jdk
-      env: PATH="/c/Program Files/Corretto8JDK/jdk-12+33-jre/bin:$PATH"
+      env: PATH="/c/Program Files/Corretto8JDK/????/bin:$PATH"
     - name: "Corretto8JRE"
       install: choco install corretto8jre
-      env: PATH="/c/Program Files/Corretto8JRE/jdk-12+33-jre/bin:$PATH"
+      env: PATH="/c/Program Files/Corretto8JRE/????/bin:$PATH"
     - name: "CorrettoJDK"
       install: choco install correttojdk
-      env: PATH="/c/Program Files/CorrettoJDK/jdk-12+33-jre/bin:$PATH"
+      env: PATH="/c/Program Files/CorrettoJDK/????/bin:$PATH"
     - name: "GraalVM"
       install: choco install graalvm
-      env: PATH="/c/Program Files/GraalVM/jdk-12+33-jre/bin:$PATH"
+      env: PATH="/c/Program Files/GraalVM/????/bin:$PATH"
     - name: "Liberica11JDK"
       install: choco install liberica11jdk
-      env: PATH="/c/Program Files/Liberica11JDK/jdk-12+33-jre/bin:$PATH"
+      env: PATH="/c/Program Files/Liberica11JDK/????/bin:$PATH"
     - name: "LibericaJDK"
       install: choco install libericajdk
-      env: PATH="/c/Program Files/LibericaJDK/jdk-12+33-jre/bin:$PATH"
+      env: PATH="/c/Program Files/LibericaJDK/????/bin:$PATH"
     - name: "OpenJDK"
       install: choco install openjdk
-      env: PATH="/c/Program Files/OpenJDK/jdk-12+33-jre/bin:$PATH"
+      env: PATH="/c/Program Files/OpenJDK/????/bin:$PATH"
     - name: "OpenJDK11"
       install: choco install openjdk11
-      env: PATH="/c/Program Files/OpenJDK11/jdk-12+33-jre/bin:$PATH"
+      env: PATH="/c/Program Files/OpenJDK11/????/bin:$PATH"
     - name: "OpenJDK11RedHatBuild"
       install: choco install openjdk11redhatbuild
-      env: PATH="/c/Program Files/OpenJDK11RedHatBuild/jdk-12+33-jre/bin:$PATH"
+      env: PATH="/c/Program Files/OpenJDK11RedHatBuild/????/bin:$PATH"
     - name: "OpenJDK8RedHatBuild"
       install: choco install openjdk8redhatbuild
-      env: PATH="/c/Program Files/OpenJDK8RedHatBuild/jdk-12+33-jre/bin:$PATH"
+      env: PATH="/c/Program Files/OpenJDK8RedHatBuild/????/bin:$PATH"
     - name: "SapMachine"
       install: choco install sapmachine
-      env: PATH="/c/Program Files/SapMachine/jdk-12+33-jre/bin:$PATH"
+      env: PATH="/c/Program Files/SapMachine/????/bin:$PATH"
     - name: "SapMachine11"
       install: choco install sapmachine11
-      env: PATH="/c/Program Files/SapMachine11/jdk-12+33-jre/bin:$PATH"
+      env: PATH="/c/Program Files/SapMachine11/????/bin:$PATH"
     - name: "WildFly"
       install: choco install wildfly
-      env: PATH="/c/Program Files/WildFly/jdk-12+33-jre/bin:$PATH"
+      env: PATH="/c/Program Files/WildFly/????/bin:$PATH"
       script: wildfly -version
 
 script: java -version

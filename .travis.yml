@@ -3,7 +3,7 @@
 os: windows
 language: bash  # language: java is not yet supported on Travis CI Windows
 env: 
-  #- PACKAGE=adoptopenjdk8
+  - PACKAGE=adoptopenjdk8
   #- PACKAGE=adoptopenjdk8jre
   #- PACKAGE=adoptopenjdk11
   #- PACKAGE=adoptopenjdk11jre
@@ -28,8 +28,9 @@ env:
 script:
   - source .travis.ps1 || true
   - echo "=========="
-  - powershell 'Set-ExecutionPolicy -ExecutionPolicy RemoteSigned'
-  - echo "=========="
-  - source .travis.ps1 || true
-  - echo "=========="
-  - source powershell .travis.ps1 || true
+  - java -version || true
+  #- powershell 'Set-ExecutionPolicy -ExecutionPolicy RemoteSigned'
+  #- echo "=========="
+  #- source .travis.ps1 || true
+  #- echo "=========="
+  #- source powershell .travis.ps1 || true

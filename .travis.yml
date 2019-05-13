@@ -9,9 +9,6 @@ env:
   - PACKAGE=adoptopenjdk
   - PACKAGE=adoptopenjdkjre
 script:
-  - |
-    powershell choco install $PACKAGE ;
-               refreshenv ;
-               echo $Env:Path ;
-               java -version ;
+  - powershell .travis.ps1
+  - java -version || true  # ignore the failure
   

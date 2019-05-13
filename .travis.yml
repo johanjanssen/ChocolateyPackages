@@ -22,6 +22,5 @@ matrix:
       install: choco install adoptopenjdkjre
       #env: PATH="/c/Program Files/AdoptOpenJDK/jdk-12+33-jre/bin:$PATH"
 script:
-  - powershell refreshenv
-  - powershell java -version
+  - powershell refreshenv; $Env:Path; java -version
   

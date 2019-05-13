@@ -3,22 +3,22 @@ os: windows
 language: bash  # language: java is not yet supported on Travis CI Windows
 matrix:
   include:
-    - name: "AdoptOpenJDK8"
-      install: choco install adoptopenjdk8
-      env: PATH="/c/Program Files/AdoptOpenJDK/jdk8u212-b03/bin:$PATH"
-    - name: "AdoptOpenJDK8JRE"
-      install: choco install adoptopenjdk8jre
-      env: PATH="/c/Program Files/AdoptOpenJDK/jdk8u212-b03-jre/bin:$PATH"
-    - name: "AdoptOpenJDK11"
-      install: choco install adoptopenjdk11
-      env: PATH="/c/Program Files/AdoptOpenJDK/jdk-11.0.3+7/bin:$PATH"
-    - name: "AdoptOpenJDK11JRE"
-      install: choco install adoptopenjdk11jre
-      env: PATH="/c/Program Files/AdoptOpenJDK/jdk-11.0.3+7-jre/bin:$PATH"
+    #- name: "AdoptOpenJDK8"
+    #  install: choco install adoptopenjdk8
+    #  env: PATH="/c/Program Files/AdoptOpenJDK/jdk8u212-b03/bin:$PATH"
+    #- name: "AdoptOpenJDK8JRE"
+    #  install: choco install adoptopenjdk8jre
+    #  env: PATH="/c/Program Files/AdoptOpenJDK/jdk8u212-b03-jre/bin:$PATH"
+    #- name: "AdoptOpenJDK11"
+    #  install: choco install adoptopenjdk11
+    #  env: PATH="/c/Program Files/AdoptOpenJDK/jdk-11.0.3+7/bin:$PATH"
+    #- name: "AdoptOpenJDK11JRE"
+    #  install: choco install adoptopenjdk11jre
+    #  env: PATH="/c/Program Files/AdoptOpenJDK/jdk-11.0.3+7-jre/bin:$PATH"
     - name: "AdoptOpenJDK"
-      install: choco install adoptopenjdk
-      env: PATH="/c/Program Files/AdoptOpenJDK/jdk-12+33/bin:$PATH"
+      install: powershell choco install adoptopenjdk
+      #env: PATH="/c/Program Files/AdoptOpenJDK/jdk-12+33/bin:$PATH"
     - name: "AdoptOpenJDKJRE"
-      install: choco install adoptopenjdkjre
-      env: PATH="/c/Program Files/AdoptOpenJDK/jdk-12+33-jre/bin:$PATH"
-script: java -version
+      install: powershell choco install adoptopenjdkjre
+      #env: PATH="/c/Program Files/AdoptOpenJDK/jdk-12+33-jre/bin:$PATH"
+script: powershell 'refreshenv; $Env:Path; java -version'

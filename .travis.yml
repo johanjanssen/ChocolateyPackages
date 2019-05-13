@@ -25,8 +25,9 @@ env:
   #- PACKAGE=sapmachine11
   #- PACKAGE=wildfly
 script:
-  - powershell .travis.ps1 || true  # ignore the failure
-  - powershell 'choco install $Env:PACKAGE'  # ; refreshenv ; echo $Env:Path ; java -version'
-  - powershell 'refreshenv ; echo $Env:Path ; java -version'
+  - powershell 'Set-ExecutionPolicy -ExecutionPolicy RemoteSigned'
+  - powershell .travis.ps1
+  #- powershell 'choco install $Env:PACKAGE'  # ; refreshenv ; echo $Env:Path ; java -version'
+  #- powershell 'refreshenv ; echo $Env:Path ; java -version'
   - java -version || true  # ignore the failure
   

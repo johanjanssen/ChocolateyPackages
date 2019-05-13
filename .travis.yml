@@ -27,5 +27,4 @@ env:
   - PACKAGE=wildfly
 script:
   - powershell 'Set-ExecutionPolicy -ExecutionPolicy RemoteSigned'
-  - powershell .travis.ps1  # java can be found inside the ps1 subshell
-  - java -version || true   # but java can not be found in the bash shell
+  - powershell .travis.ps1

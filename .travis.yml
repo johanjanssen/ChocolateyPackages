@@ -1,14 +1,13 @@
 # https://docs.travis-ci.com/user/reference/windows/
 os: windows
 language: bash  # language: java is not yet supported on Travis CI Windows
-matrix:
-  env: 
-    - PACKAGE=adoptopenjdk8
-    - PACKAGE=adoptopenjdk8jre
-    - PACKAGE=adoptopenjdk11
-    - PACKAGE=adoptopenjdk11jre
-    - PACKAGE=adoptopenjdk
-    - PACKAGE=adoptopenjdkjre
+env: 
+  - PACKAGE=adoptopenjdk8
+  - PACKAGE=adoptopenjdk8jre
+  - PACKAGE=adoptopenjdk11
+  - PACKAGE=adoptopenjdk11jre
+  - PACKAGE=adoptopenjdk
+  - PACKAGE=adoptopenjdkjre
 script:
   - |
     powershell choco install $PACKAGE ;

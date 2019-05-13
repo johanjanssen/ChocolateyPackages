@@ -3,28 +3,33 @@
 os: windows
 language: bash  # language: java is not yet supported on Travis CI Windows
 env: 
-  - PACKAGE=adoptopenjdk8
-  - PACKAGE=adoptopenjdk8jre
-  - PACKAGE=adoptopenjdk11
-  - PACKAGE=adoptopenjdk11jre
-  - PACKAGE=adoptopenjdk
-  - PACKAGE=adoptopenjdkjre
-  - PACKAGE=adoptopenjdkopenj9jdk
-  - PACKAGE=adoptopenjdkopenj9jre
-  - PACKAGE=corretto11jdk
-  - PACKAGE=corretto8jdk
-  - PACKAGE=corretto8jre
-  - PACKAGE=correttojdk
-  - PACKAGE=graalvm
-  - PACKAGE=liberica11jdk
-  - PACKAGE=libericajdk
-  - PACKAGE=openjdk
-  - PACKAGE=openjdk11
-  - PACKAGE=openjdk11redhatbuild
-  - PACKAGE=openjdk8redhatbuild
-  - PACKAGE=sapmachine
-  - PACKAGE=sapmachine11
+  #- PACKAGE=adoptopenjdk8
+  #- PACKAGE=adoptopenjdk8jre
+  #- PACKAGE=adoptopenjdk11
+  #- PACKAGE=adoptopenjdk11jre
+  #- PACKAGE=adoptopenjdk
+  #- PACKAGE=adoptopenjdkjre
+  #- PACKAGE=adoptopenjdkopenj9jdk
+  #- PACKAGE=adoptopenjdkopenj9jre
+  #- PACKAGE=corretto11jdk
+  #- PACKAGE=corretto8jdk
+  #- PACKAGE=corretto8jre
+  #- PACKAGE=correttojdk
+  #- PACKAGE=graalvm
+  #- PACKAGE=liberica11jdk
+  #- PACKAGE=libericajdk
+  #- PACKAGE=openjdk
+  #- PACKAGE=openjdk11
+  #- PACKAGE=openjdk11redhatbuild
+  #- PACKAGE=openjdk8redhatbuild
+  #- PACKAGE=sapmachine
+  #- PACKAGE=sapmachine11
   - PACKAGE=wildfly
 script:
+  - source .travis.ps1 || true
+  - echo "=========="
   - powershell 'Set-ExecutionPolicy -ExecutionPolicy RemoteSigned'
-  - powershell .travis.ps1
+  - echo "=========="
+  - source .travis.ps1 || true
+  - echo "=========="
+  - source powershell .travis.ps1 || true

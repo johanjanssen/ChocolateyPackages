@@ -10,8 +10,9 @@ matrix:
     - PACKAGE=adoptopenjdk
     - PACKAGE=adoptopenjdkjre
 script:
-  - > powershell choco install $PACKAGE ;
-                 refreshenv ;
-                 echo $Env:Path ;
-                 java -version ;
+  - |
+    powershell choco install $PACKAGE ;
+               refreshenv ;
+               echo $Env:Path ;
+               java -version ;
   

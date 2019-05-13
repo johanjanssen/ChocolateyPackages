@@ -17,8 +17,8 @@ matrix:
       env: PATH="/c/Program Files/AdoptOpenJDK/jdk-11.0.3+7-jre/bin:$PATH"
     - name: "AdoptOpenJDK"
       install: choco install adoptopenjdk
-      env: PATH="/c/Program Files/AdoptOpenJDK/jdk-12+33/bin:$PATH"
+      #env: PATH="/c/Program Files/AdoptOpenJDK/jdk-12+33/bin:$PATH"
     - name: "AdoptOpenJDKJRE"
       install: choco install adoptopenjdkjre
-      env: PATH="/c/Program Files/AdoptOpenJDK/jdk-12+33-jre/bin:$PATH"
+      #env: PATH="/c/Program Files/AdoptOpenJDK/jdk-12+33-jre/bin:$PATH"
 script: cmd.exe /C 'java -version'

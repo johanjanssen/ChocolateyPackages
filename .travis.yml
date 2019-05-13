@@ -21,4 +21,7 @@ matrix:
     - name: "AdoptOpenJDKJRE"
       install: choco install adoptopenjdkjre
       #env: PATH="/c/Program Files/AdoptOpenJDK/jdk-12+33-jre/bin:$PATH"
-script: cmd.exe /C 'java -version'
+script:
+  - call RefreshEnv.cmd
+  - java -version
+  

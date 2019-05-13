@@ -23,5 +23,5 @@ matrix:
       #env: PATH="/c/Program Files/AdoptOpenJDK/jdk-12+33-jre/bin:$PATH"
 script:
   - powershell refreshenv
-  - java -version
+  - powershell java -version
   

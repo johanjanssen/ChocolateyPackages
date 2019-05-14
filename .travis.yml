@@ -32,6 +32,6 @@ script:
   
   # Test the installer in this repo
   - cd $PACKAGE
-  # Local testing fails because a .nupkg file can not be found
+  - choco pack
   - choco install $PACKAGE -dv --force -s . || true
   - choco uninstall $PACKAGE

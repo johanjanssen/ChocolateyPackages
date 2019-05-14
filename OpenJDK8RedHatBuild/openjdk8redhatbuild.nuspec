@@ -4,7 +4,7 @@
     <id>openjdk8redhatbuild</id>
 	<version>8.212</version>
 	<packageSourceUrl>https://github.com/johanjanssen/ChocolateyPackages/tree/master/OpenJDK8RedHatBuild</packageSourceUrl>
-    <title>OpenJDK11RedHatBuild</title>
+    <title>OpenJDK8RedHatBuild</title>
     <authors>Red Hat</authors>
 	<owners>JohanJanssen</owners>
 	<licenseUrl>https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/blob/master/LICENSE</licenseUrl>

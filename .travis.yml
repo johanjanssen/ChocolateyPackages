@@ -27,4 +27,4 @@ env:
   - PACKAGE=wildfly
 script:
   - powershell 'Set-ExecutionPolicy -ExecutionPolicy RemoteSigned'
-  - source .travis.ps1
+  - powershell .travis.ps1

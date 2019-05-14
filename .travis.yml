@@ -33,5 +33,6 @@ script:
   # Test the installer in this repo
   - cd $PACKAGE
   - choco pack
+  - pwd ; ls -l
   - choco install $PACKAGE -dv --force -s . || true
   - choco uninstall $PACKAGE

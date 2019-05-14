@@ -1,9 +1,11 @@
 # https://docs.travis-ci.com/user/reference/windows/
+# https://chocolatey.org/docs/create-packages#testing-your-package
 # https://stackoverflow.com/questions/17794507/reload-the-path-in-powershell
 os: windows
 language: bash  # language: java is not yet supported on Travis CI Windows
 env: 
   - PACKAGE=adoptopenjdk8
+  - PACKAGE=AdoptOpenJDK8  # Does case matter?
   #- PACKAGE=adoptopenjdk8jre
   #- PACKAGE=adoptopenjdk11
   #- PACKAGE=adoptopenjdk11jre
@@ -24,6 +26,8 @@ env:
   #- PACKAGE=openjdk8redhatbuild
   #- PACKAGE=sapmachine
   #- PACKAGE=sapmachine11
-  - PACKAGE=wildfly
+  #- PACKAGE=wildfly
 script:
-  - powershell -ExecutionPolicy RemoteSigned -File .travis.ps1
+  # - powershell -ExecutionPolicy RemoteSigned -File .travis.ps1
+  - cd ChocolateyPackages/$PACKAGE
+  - choco install $PACKAGE -dv -s .

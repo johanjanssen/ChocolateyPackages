@@ -1,5 +1,5 @@
-choco install $Env:PACKAGE
+choco install $Env:Package
 # refreshenv  # <-- useless
-$env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User") 
+$Env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User") 
 echo $Env:Path
 java -version

@@ -31,14 +31,7 @@ script:
   - powershell -ExecutionPolicy RemoteSigned -File .travis.ps1
   
   # Test the installer in this repo
-  - pwd ; ls
-  #- cd ChocolateyPackages/$PACKAGE
-  - cd ChocolateyPackages
-  - pwd ; ls
   - cd $PACKAGE
-  - pwd ; ls
-
   # Local testing fails because a .nupkg file can not be found
   - choco install $PACKAGE -dv --force -s . || true
   - choco uninstall $PACKAGE
-

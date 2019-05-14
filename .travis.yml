@@ -4,28 +4,28 @@
 os: windows
 language: bash  # language: java is not yet supported on Travis CI Windows
 env: 
-  - PACKAGE=adoptopenjdk8
-  - PACKAGE=adoptopenjdk8jre
-  - PACKAGE=adoptopenjdk11
-  - PACKAGE=adoptopenjdk11jre
-  - PACKAGE=adoptopenjdk
-  - PACKAGE=adoptopenjdkjre
-  - PACKAGE=adoptopenjdkopenj9jdk
-  - PACKAGE=adoptopenjdkopenj9jre
-  - PACKAGE=corretto11jdk
-  - PACKAGE=corretto8jdk
-  - PACKAGE=corretto8jre
-  - PACKAGE=correttojdk
-  - PACKAGE=graalvm
-  - PACKAGE=liberica11jdk
-  - PACKAGE=libericajdk
-  - PACKAGE=openjdk
-  - PACKAGE=openjdk11
-  - PACKAGE=openjdk11redhatbuild
-  - PACKAGE=openjdk8redhatbuild
-  - PACKAGE=sapmachine
-  - PACKAGE=sapmachine11
-  - PACKAGE=wildfly
+  - PACKAGE=AdoptOpenJDK
+  - PACKAGE=AdoptOpenJDK11
+  - PACKAGE=AdoptOpenJDK11JRE
+  - PACKAGE=AdoptOpenJDK8
+  - PACKAGE=AdoptOpenJDK8JRE
+  - PACKAGE=AdoptOpenJDKJRE
+  - PACKAGE=AdoptOpenJDKOpenJ9JDK
+  - PACKAGE=AdoptOpenJDKOpenJ9JRE
+  - PACKAGE=Corretto11JDK
+  - PACKAGE=Corretto8JDK
+  - PACKAGE=Corretto8JRE
+  - PACKAGE=CorrettoJDK
+  - PACKAGE=GraalVM
+  - PACKAGE=Liberica11JDK
+  - PACKAGE=LibericaJDK
+  - PACKAGE=OpenJDK
+  - PACKAGE=OpenJDK11
+  - PACKAGE=OpenJDK11RedHatBuild
+  - PACKAGE=OpenJDK8RedHatBuild
+  - PACKAGE=SapMachine
+  - PACKAGE=SapMachine11
+  - PACKAGE=WildFly
 script:
   # Test the public installer
   - powershell -ExecutionPolicy RemoteSigned -File .travis.ps1

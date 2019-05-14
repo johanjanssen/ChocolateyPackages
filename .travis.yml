@@ -34,5 +34,5 @@ script:
   - cd $PACKAGE
   - choco pack
   - pwd ; ls -l
-  - choco install $PACKAGE -dv --force -s . || true
+  - choco install $PACKAGE -dv --force -s .
   - choco uninstall $PACKAGE

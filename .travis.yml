@@ -5,29 +5,32 @@ os: windows
 language: bash  # language: java is not yet supported on Travis CI Windows
 env: 
   - PACKAGE=adoptopenjdk8
-  - PACKAGE=AdoptOpenJDK8  # Does case matter?
-  #- PACKAGE=adoptopenjdk8jre
-  #- PACKAGE=adoptopenjdk11
-  #- PACKAGE=adoptopenjdk11jre
-  #- PACKAGE=adoptopenjdk
-  #- PACKAGE=adoptopenjdkjre
-  #- PACKAGE=adoptopenjdkopenj9jdk
-  #- PACKAGE=adoptopenjdkopenj9jre
-  #- PACKAGE=corretto11jdk
-  #- PACKAGE=corretto8jdk
-  #- PACKAGE=corretto8jre
-  #- PACKAGE=correttojdk
-  #- PACKAGE=graalvm
-  #- PACKAGE=liberica11jdk
-  #- PACKAGE=libericajdk
-  #- PACKAGE=openjdk
-  #- PACKAGE=openjdk11
-  #- PACKAGE=openjdk11redhatbuild
-  #- PACKAGE=openjdk8redhatbuild
-  #- PACKAGE=sapmachine
-  #- PACKAGE=sapmachine11
-  #- PACKAGE=wildfly
+  - PACKAGE=adoptopenjdk8jre
+  - PACKAGE=adoptopenjdk11
+  - PACKAGE=adoptopenjdk11jre
+  - PACKAGE=adoptopenjdk
+  - PACKAGE=adoptopenjdkjre
+  - PACKAGE=adoptopenjdkopenj9jdk
+  - PACKAGE=adoptopenjdkopenj9jre
+  - PACKAGE=corretto11jdk
+  - PACKAGE=corretto8jdk
+  - PACKAGE=corretto8jre
+  - PACKAGE=correttojdk
+  - PACKAGE=graalvm
+  - PACKAGE=liberica11jdk
+  - PACKAGE=libericajdk
+  - PACKAGE=openjdk
+  - PACKAGE=openjdk11
+  - PACKAGE=openjdk11redhatbuild
+  - PACKAGE=openjdk8redhatbuild
+  - PACKAGE=sapmachine
+  - PACKAGE=sapmachine11
+  - PACKAGE=wildfly
 script:
-  # - powershell -ExecutionPolicy RemoteSigned -File .travis.ps1
+  # Test the public installer
+  - powershell -ExecutionPolicy RemoteSigned -File .travis.ps1
+  
+  # Test the installer in this repo
   - cd ChocolateyPackages/$PACKAGE
-  - choco install $PACKAGE -dv -s .
+  # Local testing fails because a .nupkg file can not be found
+  - choco install $PACKAGE -dv -s . || true

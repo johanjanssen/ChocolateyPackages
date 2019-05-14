@@ -26,5 +26,4 @@ env:
   - PACKAGE=sapmachine11
   - PACKAGE=wildfly
 script:
-  - powershell 'Set-ExecutionPolicy -ExecutionPolicy RemoteSigned'
-  - powershell .travis.ps1
+  - powershell -ExecutionPolicy RemoteSigned .travis.ps1

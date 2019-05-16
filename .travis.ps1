@@ -4,13 +4,13 @@ choco install $Env:PACKAGE --force -s .
 $Env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User") 
 
 If ($Env:PACKAGE -eq "WildFly") {
-	$error.clear()
+	$error.clear()	
 	try { 
-		echo "try"
-		cd C:\Program Files\WildFly\wildfly-16.0.0.Final\bin
-		echo pwd
+		Write-Host "try"
+		cd "C:\Program Files\WildFly\wildfly-16.0.0.Final\bin"
+		(Get-Item -Path ".\").FullName
 		echo/|standalone.bat --version
-		echo "end"
+		Write-Host "end"
 	} catch { exit 1 }
 	exit 0
 }

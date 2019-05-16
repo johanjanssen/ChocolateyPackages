@@ -1,12 +1,7 @@
 cd $Env:PACKAGE
-$error.clear()
-try {
-	choco pack
-	choco install $Env:PACKAGE --force -s .
-} catch { 
-	echo "choco pack or choco install failed"
-	exit 1
-}
+choco pack
+choco install $Env:PACKAGE --force -s .
+
 $Env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User") 
 
 If ($Env:PACKAGE -eq "WildFly") {

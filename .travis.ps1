@@ -3,7 +3,10 @@ $error.clear()
 try {
 	choco pack
 	choco install $Env:PACKAGE --force -s .
-} catch { exit 1 }
+} catch { 
+	echo "choco pack or choco install failed"
+	exit 1
+}
 $Env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User") 
 
 If ($Env:PACKAGE -eq "WildFly") {
@@ -15,6 +18,7 @@ If ($Env:PACKAGE -eq "WildFly") {
 		exit 0
 	}
 	Else {
+		echo "WildFly MANIFEST.MF file not found"
 		exit 1
 	}
 }
@@ -22,7 +26,10 @@ If ($Env:PACKAGE -eq "WildFly") {
 $error.clear()
 try { 
 	java -version
-} catch { exit 1 }
+} catch { 
+	echo "java -version failed"
+	exit 1
+}
 
 
 

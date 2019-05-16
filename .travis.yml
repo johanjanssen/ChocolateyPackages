@@ -5,33 +5,26 @@ os: windows
 language: bash  # language: java is not yet supported on Travis CI Windows
 env: 
   - PACKAGE=AdoptOpenJDK
-#  - PACKAGE=AdoptOpenJDK11
-#  - PACKAGE=AdoptOpenJDK11JRE
-#  - PACKAGE=AdoptOpenJDK8
-#  - PACKAGE=AdoptOpenJDK8JRE
-#  - PACKAGE=AdoptOpenJDKJRE
-#  - PACKAGE=AdoptOpenJDKOpenJ9JDK
-#  - PACKAGE=AdoptOpenJDKOpenJ9JRE
-#  - PACKAGE=Corretto11JDK
-#  - PACKAGE=Corretto8JDK
-#  - PACKAGE=Corretto8JRE
-#  - PACKAGE=CorrettoJDK
-#  - PACKAGE=GraalVM
-#  - PACKAGE=Liberica11JDK
-#  - PACKAGE=LibericaJDK
-#  - PACKAGE=OpenJDK
-#  - PACKAGE=OpenJDK11
-#  - PACKAGE=OpenJDK11RedHatBuild
-#  - PACKAGE=OpenJDK8RedHatBuild
-#  - PACKAGE=SapMachine
-#  - PACKAGE=SapMachine11
+  - PACKAGE=AdoptOpenJDK11
+  - PACKAGE=AdoptOpenJDK11JRE
+  - PACKAGE=AdoptOpenJDK8
+  - PACKAGE=AdoptOpenJDK8JRE
+  - PACKAGE=AdoptOpenJDKJRE
+  - PACKAGE=AdoptOpenJDKOpenJ9JDK
+  - PACKAGE=AdoptOpenJDKOpenJ9JRE
+  - PACKAGE=Corretto11JDK
+  - PACKAGE=Corretto8JDK
+  - PACKAGE=Corretto8JRE
+  - PACKAGE=CorrettoJDK
+  - PACKAGE=GraalVM
+  - PACKAGE=Liberica11JDK
+  - PACKAGE=LibericaJDK
+  - PACKAGE=OpenJDK
+  - PACKAGE=OpenJDK11
+  - PACKAGE=OpenJDK11RedHatBuild
+  - PACKAGE=OpenJDK8RedHatBuild
+  - PACKAGE=SapMachine
+  - PACKAGE=SapMachine11
   - PACKAGE=WildFly
 script:
-  # Test the public installer
   - powershell -ExecutionPolicy RemoteSigned -File .travis.ps1
-  # Test the installer in this repo
-  #- cd $PACKAGE
-  #- choco pack
-  #- pwd ; ls -l
-  #- choco install $PACKAGE -dv --force -s .
-  #- choco uninstall $PACKAGE

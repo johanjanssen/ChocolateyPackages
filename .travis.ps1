@@ -9,7 +9,7 @@ If ($Env:PACKAGE -eq "WildFly") {
 		Write-Host "try"
 		cd "C:\Program Files\WildFly\wildfly-16.0.0.Final\bin"
 		(Get-Item -Path ".\").FullName
-		echo/|standalone.bat --version
+		echo "Press continue" |.\standalone.bat --version
 		Write-Host "end"
 	} catch { exit 1 }
 	exit 0

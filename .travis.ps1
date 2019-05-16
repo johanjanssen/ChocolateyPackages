@@ -1,5 +1,13 @@
-choco install $Env:PACKAGE
-# refreshenv  # <-- useless
+cd $Env:PACKAGE
+choco pack
+choco install $Env:PACKAGE -dv --force -s .
 $Env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User") 
-echo $Env:Path
-java -version
+
+$error.clear()
+try { 
+	java -version
+} catch { travis_terminate 1; }
+
+
+
+

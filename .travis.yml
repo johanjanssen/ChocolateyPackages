@@ -27,12 +27,4 @@ env:
   - PACKAGE=SapMachine11
   - PACKAGE=WildFly
 script:
-  # Test the public installer
   - powershell -ExecutionPolicy RemoteSigned -File .travis.ps1
-  
-  # Test the installer in this repo
-  - cd $PACKAGE
-  - choco pack
-  - pwd ; ls -l
-  - choco install $PACKAGE -dv --force -s .
-  - choco uninstall $PACKAGE

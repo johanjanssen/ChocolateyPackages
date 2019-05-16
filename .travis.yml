@@ -29,7 +29,6 @@ env:
 script:
   # Test the public installer
   - powershell -ExecutionPolicy RemoteSigned -File .travis.ps1
-  - echo %errorlevel%
   # Test the installer in this repo
   #- cd $PACKAGE
   #- choco pack

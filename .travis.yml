@@ -1,29 +1,38 @@
 # https://docs.travis-ci.com/user/reference/windows/
+# https://chocolatey.org/docs/create-packages#testing-your-package
+# https://stackoverflow.com/questions/17794507/reload-the-path-in-powershell
 os: windows
 language: bash  # language: java is not yet supported on Travis CI Windows
-matrix:
-  include:
-    - name: "AdoptOpenJDK8"
-      install: choco install adoptopenjdk8
-      env: PATH="/c/Program Files/AdoptOpenJDK/jdk8u212-b03/bin:$PATH"
-    - name: "AdoptOpenJDK8JRE"
-      install: choco install adoptopenjdk8jre
-      env: PATH="/c/Program Files/AdoptOpenJDK/jdk8u212-b03-jre/bin:$PATH"
-    - name: "AdoptOpenJDK11"
-      install: choco install adoptopenjdk11
-      env: PATH="/c/Program Files/AdoptOpenJDK/jdk-11.0.3+7/bin:$PATH"
-    - name: "AdoptOpenJDK11JRE"
-      install: choco install adoptopenjdk11jre
-      env: PATH="/c/Program Files/AdoptOpenJDK/jdk-11.0.3+7-jre/bin:$PATH"
-    - name: "AdoptOpenJDK"
-      install: choco install adoptopenjdk
-      #env: PATH="/c/Program Files/AdoptOpenJDK/jdk-12+33/bin:$PATH"
-    - name: "AdoptOpenJDKJRE"
-      #install: choco install adoptopenjdkjre
-      #env: PATH="/c/Program Files/AdoptOpenJDK/jdk-12+33-jre/bin:$PATH"
+env: 
+  - PACKAGE=AdoptOpenJDK
+  - PACKAGE=AdoptOpenJDK11
+  - PACKAGE=AdoptOpenJDK11JRE
+  - PACKAGE=AdoptOpenJDK8
+  - PACKAGE=AdoptOpenJDK8JRE
+  - PACKAGE=AdoptOpenJDKJRE
+  - PACKAGE=AdoptOpenJDKOpenJ9JDK
+  - PACKAGE=AdoptOpenJDKOpenJ9JRE
+  - PACKAGE=Corretto11JDK
+  - PACKAGE=Corretto8JDK
+  - PACKAGE=Corretto8JRE
+  - PACKAGE=CorrettoJDK
+  - PACKAGE=GraalVM
+  - PACKAGE=Liberica11JDK
+  - PACKAGE=LibericaJDK
+  - PACKAGE=OpenJDK
+  - PACKAGE=OpenJDK11
+  - PACKAGE=OpenJDK11RedHatBuild
+  - PACKAGE=OpenJDK8RedHatBuild
+  - PACKAGE=SapMachine
+  - PACKAGE=SapMachine11
+  - PACKAGE=WildFly
 script:
-  - powershell 'choco install adoptopenjdkjre'
-  - powershell 'refreshenv'
-  - powershell 'echo $Env:Path'
-  - powershell 'java -version'
+  # Test the public installer
+  - powershell -ExecutionPolicy RemoteSigned -File .travis.ps1
   
+  # Test the installer in this repo
+  - cd $PACKAGE
+  - choco pack
+  - pwd ; ls -l
+  - choco install $PACKAGE -dv --force -s .
+  - choco uninstall $PACKAGE

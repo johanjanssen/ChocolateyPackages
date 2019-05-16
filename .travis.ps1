@@ -1,8 +1,8 @@
 cd $Env:PACKAGE
-try {
+#try {
 	choco pack
 	choco install $Env:PACKAGE --force -s .
-} catch { exit 1}
+#} catch { exit 1}
 $Env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User") 
 
 If ($Env:PACKAGE -eq "WildFly") {

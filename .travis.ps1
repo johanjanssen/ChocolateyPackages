@@ -6,7 +6,7 @@ $Env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";"
 $error.clear()
 try { 
 	java -version
-} catch { exit $exitcode }
+} catch { exit 1 }
 
 
 

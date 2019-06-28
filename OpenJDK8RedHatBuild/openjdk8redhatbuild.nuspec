@@ -10,7 +10,7 @@
 	<licenseUrl>https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/blob/master/LICENSE</licenseUrl>
     <projectUrl>https://adoptopenjdk.net/upstream.html</projectUrl>
     <tags>openjdk java jvm</tags>
-    <summary>OpenJDK is an open source Java Development Kit provided by Oracle. These binaries are build by Red Hat op behalf of OpenJDK.</summary>
-    <description>OpenJDK is an open source Java Development Kit provided by Oracle. These binaries are build by Red Hat op behalf of OpenJDK.</description>
+    <summary>OpenJDK is an open source Java Development Kit provided by Oracle. These binaries are build by Red Hat on behalf of OpenJDK.</summary>
+    <description>OpenJDK is an open source Java Development Kit provided by Oracle. These binaries are build by Red Hat on behalf of OpenJDK.</description>
   </metadata>
 </package>

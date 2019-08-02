@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>    
     <id>adoptopenjdk11jre</id>
-	<version>11.0.3.7</version>
+	<version>11.0.4.11</version>
 	<packageSourceUrl>https://github.com/johanjanssen/ChocolateyPackages/tree/master/AdoptOpenJDK11JRE</packageSourceUrl>
     <title>AdoptOpenJDK11JRE</title>
     <authors>AdoptOpenJDK</authors>

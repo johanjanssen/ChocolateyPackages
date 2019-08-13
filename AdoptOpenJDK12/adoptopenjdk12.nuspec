@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>    
+    <id>adoptopenjdk12</id>
+	<version>12.0.2.10</version>
+	<packageSourceUrl>https://github.com/johanjanssen/ChocolateyPackages/tree/master/AdoptOpenJDK</packageSourceUrl>
+    <title>AdoptOpenJDK 12</title>
+    <authors>AdoptOpenJDK</authors>
+	<owners>JohanJanssen</owners>
+	<licenseUrl>https://github.com/AdoptOpenJDK/openjdk-jdk12u/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://adoptopenjdk.net/</projectUrl>
+    <tags>openjdk java jvm</tags>
+    <summary>AdoptOpenJDK provides prebuilt OpenJDK build binaries. This one uses Hotspot.</summary>
+    <description>AdoptOpenJDK provides prebuilt OpenJDK build binaries. This one uses Hotspot.</description>
+  </metadata>
+</package>

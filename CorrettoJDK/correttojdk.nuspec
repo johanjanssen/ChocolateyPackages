@@ -2,9 +2,9 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>    
     <id>correttojdk</id>
-	<version>11.0.3.71</version>
+	<version>11.0.4.11</version>
 	<packageSourceUrl>https://github.com/johanjanssen/ChocolateyPackages/tree/master/CorrettoJDK</packageSourceUrl>
-    <title>CorrettoJDK</title>
+    <title>Corretto JDK</title>
     <authors>Amazon</authors>
 	<owners>JohanJanssen</owners>
 	<licenseUrl>https://github.com/corretto/corretto-11/blob/develop/LICENSE</licenseUrl>

@@ -7,6 +7,8 @@ env:
   - PACKAGE=AdoptOpenJDK
   - PACKAGE=AdoptOpenJDK11
   - PACKAGE=AdoptOpenJDK11JRE
+  - PACKAGE=AdoptOpenJDK12
+  - PACKAGE=AdoptOpenJDK12JRE
   - PACKAGE=AdoptOpenJDK8
   - PACKAGE=AdoptOpenJDK8JRE
   - PACKAGE=AdoptOpenJDKJRE
@@ -22,6 +24,7 @@ env:
   - PACKAGE=OpenJDK
   - PACKAGE=OpenJDK11
   - PACKAGE=OpenJDK11RedHatBuild
+  - PACKAGE=OpenJDK12
   - PACKAGE=OpenJDK8RedHatBuild
   - PACKAGE=SapMachine
   - PACKAGE=SapMachine11

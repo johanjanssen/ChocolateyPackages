@@ -4,11 +4,15 @@
     <id>adoptopenjdk8</id>
 	<version>8.212.2</version>
 	<packageSourceUrl>https://github.com/johanjanssen/ChocolateyPackages/tree/master/AdoptOpenJDK8</packageSourceUrl>
-    <title>AdoptOpenJDK8</title>
+    <title>AdoptOpenJDK 8</title>
     <authors>AdoptOpenJDK</authors>
 	<owners>JohanJanssen</owners>
 	<licenseUrl>https://github.com/AdoptOpenJDK/openjdk-jdk8u/blob/master/LICENSE</licenseUrl>
     <projectUrl>https://adoptopenjdk.net/</projectUrl>
+	<docsUrl>https://adoptopenjdk.net/</docsUrl>
+	<mailingListUrl>https://github.com/AdoptOpenJDK/TSC/issues/32</mailingListUrl>
+	<bugTrackerUrl>https://github.com/AdoptOpenJDK/openjdk-build/issues</bugTrackerUrl>
+	<projectSourceUrl>https://github.com/AdoptOpenJDK</projectSourceUrl>
     <tags>openjdk java jvm</tags>
     <summary>AdoptOpenJDK provides prebuilt OpenJDK build binaries. This one uses Hotspot.</summary>
     <description>AdoptOpenJDK provides prebuilt OpenJDK build binaries. This one uses Hotspot.</description>

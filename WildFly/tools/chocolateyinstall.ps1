@@ -1,8 +1,8 @@
 ﻿$packageArgs = @{
     PackageName      = $env:ChocolateyPackageName
     UnzipLocation    = $targetDir = 'C:\Program Files\WildFly'
-    Url              = 'https://download.jboss.org/wildfly/16.0.0.Final/wildfly-16.0.0.Final.zip'
-    Checksum         = 'b55ed374ab4f8534c2343ac9a283c71fa6d22dfe'
+    Url              = 'https://download.jboss.org/wildfly/17.0.1.Final/wildfly-17.0.1.Final.zip'
+    Checksum         = '6d3dd603eb3e177c6e7e06c649997ec182445789'
     ChecksumType     = 'sha1'
 }
 

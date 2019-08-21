@@ -1,7 +1,7 @@
 ﻿Uninstall-ChocolateyEnvironmentVariable 'JAVA_HOME' 'Machine'
-rm -r 'C:\Program Files\AdoptOpenJDK\jdk8u212-b04'
+rm -r 'C:\Program Files\AdoptOpenJDK\jdk8u222-b10'
 
-$pathToUnInstall = 'C:\Program Files\AdoptOpenJDK\jdk8u212-b04\bin'
+$pathToUnInstall = 'C:\Program Files\AdoptOpenJDK\jdk8u222-b10\bin'
 $pathType = 'Machine'
 
 if ($env:PATH.ToLower().Contains($pathToUnInstall.ToLower()))

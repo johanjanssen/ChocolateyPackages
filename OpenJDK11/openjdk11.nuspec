@@ -2,13 +2,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>    
     <id>openjdk11</id>
-	<version>11.0.2.01</version>
+	<version>11.0.4.11</version>
 	<packageSourceUrl>https://github.com/johanjanssen/ChocolateyPackages/tree/master/OpenJDK11</packageSourceUrl>
     <title>OpenJDK 11</title>
     <authors>Oracle</authors>
 	<owners>JohanJanssen</owners>
 	<licenseUrl>http://openjdk.java.net/legal/</licenseUrl>
-    <projectUrl>http://openjdk.java.net/</projectUrl>
+    <projectUrl>https://wiki.openjdk.java.net/display/JDKUpdates/JDK11u</projectUrl>
 	<docsUrl>http://openjdk.java.net/</docsUrl>
 	<mailingListUrl>http://mail.openjdk.java.net/mailman/listinfo</mailingListUrl>
 	<bugTrackerUrl>https://bugs.openjdk.java.net</bugTrackerUrl>

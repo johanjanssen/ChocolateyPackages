@@ -25,6 +25,7 @@ env:
   - PACKAGE=OpenJDK11
   - PACKAGE=OpenJDK11RedHatBuild
   - PACKAGE=OpenJDK12
+  - PACKAGE=OpenJDK13
   - PACKAGE=OpenJDK8RedHatBuild
   - PACKAGE=SapMachine
   - PACKAGE=SapMachine11

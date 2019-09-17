@@ -1,12 +1,12 @@
 ﻿$packageArgs = @{
     PackageName      = $env:ChocolateyPackageName
     UnzipLocation    = $targetDir = 'C:\Program Files\OpenJDK'
-    Url64            = 'https://download.java.net/java/GA/jdk12.0.2/e482c34c86bd4bf8b56c0b35558996b9/10/GPL/openjdk-12.0.2_windows-x64_bin.zip'
-    Checksum64       = 'a30bed3d6d62f6ae1052aaf3c6956aaee8e3deb2f50f155575112f3f29411fba'
+    Url64            = 'https://download.java.net/java/GA/jdk13/5b8a42f3905b406298b72d750b6919f6/33/GPL/openjdk-13_windows-x64_bin.zip'
+    Checksum64       = '053d8c87bb34347478512911a6218a389720bffcde4e496be5a54d51ad7c9c2f'
     ChecksumType64   = 'sha256'
 }
 
 Install-ChocolateyZipPackage @packageArgs
-Install-ChocolateyEnvironmentVariable 'JAVA_HOME' $targetDir\jdk-12.0.2 'Machine'
+Install-ChocolateyEnvironmentVariable 'JAVA_HOME' $targetDir\jdk-13 'Machine'
 # The full path instead of the %JAVA_HOME% is needed so it can be removed with the Chocolatey Uninstall
-Install-ChocolateyPath 'C:\Program Files\OpenJDK\jdk-12.0.2\bin' -PathType 'Machine'
+Install-ChocolateyPath 'C:\Program Files\OpenJDK\jdk-13\bin' -PathType 'Machine'

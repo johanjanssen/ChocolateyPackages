@@ -4,7 +4,7 @@
     <id>sapmachine13</id>
 	<version>13.0.0</version>
 	<packageSourceUrl>https://github.com/johanjanssen/ChocolateyPackages/tree/master/SapMachine</packageSourceUrl>
-    <title>SapMachine</title>
+    <title>SapMachine 13</title>
     <authors>SAP</authors>
 	<owners>JohanJanssen</owners>
 	<licenseUrl>https://github.com/SAP/SapMachine/blob/sapmachine/LICENSE</licenseUrl>

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>    
-    <id>libericamissioncontrol</id>
+    <id>liberica-mission-control</id>
 	<version>7.0</version>
 	<packageSourceUrl>https://github.com/johanjanssen/ChocolateyPackages/tree/master/LibericaMissionControl</packageSourceUrl>
     <title>Liberica Mission Control</title>

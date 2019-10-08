@@ -4,17 +4,15 @@
     <id>liberica-mission-control</id>
 	<version>7.0</version>
 	<packageSourceUrl>https://github.com/johanjanssen/ChocolateyPackages/tree/master/LibericaMissionControl</packageSourceUrl>
-    <title>Liberica Mission Control</title>
+    <title>Liberica Mission Control 64 bit only</title>
     <authors>BellSoft</authors>
 	<owners>JohanJanssen</owners>
 	<licenseUrl>https://github.com/JDKMissionControl/jmc/blob/develop/license/LICENSE.txt</licenseUrl>
     <projectUrl>https://bell-sw.com/pages/lmc/</projectUrl>
-	<docsUrl>https://bell-sw.com/pages/lmc/</docsUrl>
-	<mailingListUrl>https://bell-sw.com/pages/lmc/</mailingListUrl>
 	<bugTrackerUrl>https://github.com/JDKMissionControl/jmc/issues</bugTrackerUrl>
 	<projectSourceUrl>https://github.com/JDKMissionControl/jmc</projectSourceUrl>
     <tags>liberica mission control profiler java jvm</tags>
     <summary>Liberica Mission Control is a low-overhead Java profiler built from OpenJDK JMC project provided by BellSoft.</summary>
-    <description>Liberica Mission Control is a low-overhead Java profiler built from OpenJDK JMC project provided by BellSoft.</description>
+    <description>Liberica Mission Control is a low-overhead Java profiler built from OpenJDK JMC project provided by BellSoft. 64 bit only</description>
   </metadata>
 </package>

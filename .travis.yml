@@ -4,16 +4,6 @@
 os: windows
 language: bash  # language: java is not yet supported on Travis CI Windows
 env: 
-  - PACKAGE=AdoptOpenJDK
-  - PACKAGE=AdoptOpenJDK11
-  - PACKAGE=AdoptOpenJDK11JRE
-  - PACKAGE=AdoptOpenJDK12
-  - PACKAGE=AdoptOpenJDK12JRE
-  - PACKAGE=AdoptOpenJDK8
-  - PACKAGE=AdoptOpenJDK8JRE
-  - PACKAGE=AdoptOpenJDKJRE
-  - PACKAGE=AdoptOpenJDKOpenJ9JDK
-  - PACKAGE=AdoptOpenJDKOpenJ9JRE
   - PACKAGE=Corretto11JDK
   - PACKAGE=Corretto8JDK
   - PACKAGE=Corretto8JRE

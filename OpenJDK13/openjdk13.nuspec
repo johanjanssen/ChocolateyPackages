@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>    
     <id>openjdk13</id>
-	<version>13.0.33</version>
+	<version>13.0.33.1</version>
 	<packageSourceUrl>https://github.com/johanjanssen/ChocolateyPackages/tree/master/OpenJDK13</packageSourceUrl>
     <title>OpenJDK 13</title>
     <authors>Oracle</authors>

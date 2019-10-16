@@ -15,6 +15,7 @@ env:
   - PACKAGE=ojdkbuild8
   - PACKAGE=ojdkbuild11
   - PACKAGE=OpenJDK
+  - PACKAGE=OpenJDK8  
   - PACKAGE=OpenJDK11
   - PACKAGE=OpenJDK11RedHatBuild
   - PACKAGE=OpenJDK12

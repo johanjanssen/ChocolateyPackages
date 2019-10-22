@@ -9,6 +9,7 @@ env:
   - PACKAGE=Corretto8JRE
   - PACKAGE=CorrettoJDK
   - PACKAGE=GraalVM
+  - PACKAGE=Liberica8JDK  
   - PACKAGE=Liberica11JDK
   - PACKAGE=LibericaJDK
   - PACKAGE=ojdkbuild  

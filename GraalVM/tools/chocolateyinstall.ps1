@@ -2,7 +2,7 @@
     PackageName      = $env:ChocolateyPackageName
     UnzipLocation    = $targetDir = 'C:\Program Files\GraalVM'
     Url64            = 'https://github.com/oracle/graal/releases/download/vm-19.2.1/graalvm-ce-windows-amd64-19.2.1.zip'
-    Checksum64       = '8E721AB4BA74E1186C90BC28327E30FDBE874E474AB727E954960C59CBE3234D'
+    Checksum64       = '244155151A431D98F87B49BA7B5A131B5CEA7C9569ED6FE9375D011ADE06D8AC'
     ChecksumType64   = 'sha256'
 }
 

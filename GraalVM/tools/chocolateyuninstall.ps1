@@ -1,7 +1,7 @@
 ﻿Uninstall-ChocolateyEnvironmentVariable 'JAVA_HOME' 'Machine'
-rm -r 'C:\Program Files\GraalVM\graalvm-ce-19.2.0.1'
+rm -r 'C:\Program Files\GraalVM\graalvm-ce-19.2.1'
 
-$pathToUnInstall = 'C:\Program Files\GraalVM\graalvm-ce-19.2.0.1\bin'
+$pathToUnInstall = 'C:\Program Files\GraalVM\graalvm-ce-19.2.1\bin'
 $pathType = 'Machine'
 
 if ($env:PATH.ToLower().Contains($pathToUnInstall.ToLower()))

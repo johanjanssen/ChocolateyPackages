@@ -2,9 +2,9 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>    
     <id>ojdkbuild</id>
-	<version>12.0.2.9</version>
+	<version>13.0.1.1</version>
 	<packageSourceUrl>https://github.com/johanjanssen/ChocolateyPackages/tree/master/ojdkbuild</packageSourceUrl>
-    <title>ojdkbuild 12 JDK</title>
+    <title>ojdkbuild 13 JDK</title>
     <authors>ojdkbuild community</authors>
 	<owners>JohanJanssen</owners>
 	<licenseUrl>https://github.com/ojdkbuild/ojdkbuild/blob/master/LICENSE</licenseUrl>

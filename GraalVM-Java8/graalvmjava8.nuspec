@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>    
-    <id>graalvm-java11</id>
+    <id>graalvm-java8</id>
 	<version>19.3.0</version>
-	<packageSourceUrl>https://github.com/johanjanssen/ChocolateyPackages/tree/master/GraalVMJava11</packageSourceUrl>
-    <title>GraalVM Java 11</title>
+	<packageSourceUrl>https://github.com/johanjanssen/ChocolateyPackages/tree/master/GraalVM-Java8</packageSourceUrl>
+    <title>GraalVM Java 8</title>
     <authors>Oracle</authors>
 	<owners>JohanJanssen</owners>
 	<licenseUrl>https://github.com/oracle/graal/blob/master/LICENSE</licenseUrl>

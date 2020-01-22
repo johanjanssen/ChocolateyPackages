@@ -1,4 +1,4 @@
-﻿$pathToUnInstall = 'C:\Program Files\OpenJDK\openjdk-8u232-b09\bin'
+﻿$pathToUnInstall = 'C:\Program Files\OpenJDK\openjdk-8u242-b08\bin'
 $pathType = 'Machine'
 
 if ($env:PATH.ToLower().Contains($pathToUnInstall.ToLower()))

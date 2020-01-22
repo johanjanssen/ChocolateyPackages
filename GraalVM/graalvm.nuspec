@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>    
     <id>graalvm</id>
-	<version>19.3.0</version>
+	<version>19.3.1</version>
 	<packageSourceUrl>https://github.com/johanjanssen/ChocolateyPackages/tree/master/GraalVM</packageSourceUrl>
     <title>GraalVM Java 11</title>
     <authors>Oracle</authors>

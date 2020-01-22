@@ -1,8 +1,8 @@
 ﻿$packageArgs = @{
     PackageName      = $env:ChocolateyPackageName
     UnzipLocation    = $targetDir = 'C:\Program Files\Corretto'
-    Url64            = 'https://d3pxv6yz143wms.cloudfront.net/8.232.09.1/amazon-corretto-8.232.09.1-windows-x64-jre.zip'
-    Checksum64       = 'f4b3613af15508d4e6d3f8965a1be8a3'
+    Url64            = 'https://corretto.aws/downloads/resources/8.242.08.1/amazon-corretto-8.242.08.1-windows-x64-jre.zip'
+    Checksum64       = 'b9aded040819457d04a36b726100e3f6'
     ChecksumType64   = 'md5'
 }
 

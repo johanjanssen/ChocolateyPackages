@@ -2,9 +2,9 @@
 $installDir = "$programFiles\GraalVM"
 
 Uninstall-ChocolateyEnvironmentVariable 'JAVA_HOME' 'Machine'
-rm -r "$installDir\graalvm-ce-java8-19.3.1"
+rm -r "$installDir\graalvm-ce-java8-20.0.0"
 
-$pathToUnInstall = "$installDir\graalvm-ce-java8-19.3.1\bin"
+$pathToUnInstall = "$installDir\graalvm-ce-java8-20.0.0\bin"
 $pathType = 'Machine'
 
 if ($env:PATH.ToLower().Contains($pathToUnInstall.ToLower()))

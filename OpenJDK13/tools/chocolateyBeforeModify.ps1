@@ -10,12 +10,13 @@ if ($env:PATH.ToLower().Contains($pathToUnInstall.ToLower()))
 	$actualPath.Remove($pathToUnInstall)	
 	$newPath =  $actualPath -Join $statementTerminator
 
+	$cmd = "Set-EnvironmentVariable -Name 'Path' -Value $newPath -Scope $pathType"
+
 	if ($pathType -eq [System.EnvironmentVariableTarget]::Machine) {
 		if (Test-ProcessAdminRights) {
-			Set-EnvironmentVariable -Name 'Path' -Value $newPath -Scope $pathType
+			Invoke-Expression $cmd
 		} else {
-			$psArgs = "UnInstall-ChocolateyPath -pathToUnInstall `'$originalPathToUnInstall`' -pathType `'$pathType`'"
-			Start-ChocolateyProcessAsAdmin "$psArgs"
+			Start-ChocolateyProcessAsAdmin "$cmd"
 		}
 	} else {
 		Set-EnvironmentVariable -Name 'Path' -Value $newPath -Scope $pathType

@@ -1,25 +1,18 @@
-﻿$pathToUnInstall = 'C:\Program Files\OpenJDK\jdk-13.0.2\bin'
-$pathType = 'Machine'
+﻿$actualPath = (Get-EnvironmentVariable -Name 'Path' -Scope 'Machine' -PreserveVariables) -split ';'
 
-if ($env:PATH.ToLower().Contains($pathToUnInstall.ToLower()))
+if ($actualPath -contains $pathToUnInstall)
 {
-	$statementTerminator = ";"
 	Write-Host "PATH environment variable contains $pathToUnInstall. Removing..."
-	$actualPath = [System.Collections.ArrayList](Get-EnvironmentVariable -Name 'Path' -Scope $pathType).split($statementTerminator)
-
+	
 	$actualPath.Remove($pathToUnInstall)	
-	$newPath =  $actualPath -Join $statementTerminator
+	$newPath =  $actualPath -Join ';'
 
-	$cmd = "Set-EnvironmentVariable -Name 'Path' -Value $newPath -Scope $pathType"
+	$cmd = "Set-EnvironmentVariable -Name 'Path' -Value $newPath -Scope 'Machine'"
 
-	if ($pathType -eq [System.EnvironmentVariableTarget]::Machine) {
-		if (Test-ProcessAdminRights) {
-			Invoke-Expression $cmd
-		} else {
-			Start-ChocolateyProcessAsAdmin "$cmd"
-		}
-	} else {
-		Set-EnvironmentVariable -Name 'Path' -Value $newPath -Scope $pathType
-	}
+    if (Test-ProcessAdminRights) {
+        Invoke-Expression $cmd
+    } else {
+        Start-ChocolateyProcessAsAdmin "$cmd"
+    }
 }
 

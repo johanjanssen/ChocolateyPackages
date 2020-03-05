@@ -1,2 +1,5 @@
-﻿Uninstall-ChocolateyEnvironmentVariable 'JAVA_HOME' 'Machine'
-rm -r 'C:\Program Files\OpenJDK\openjdk-11.0.6_10'
+﻿$programFiles = (${env:ProgramFiles}, ${env:ProgramFiles(x86)} -ne $null)[0]
+$installDir = "$programFiles\OpenJDK"
+
+Uninstall-ChocolateyEnvironmentVariable 'JAVA_HOME' 'Machine'
+rm -r "$installDir\openjdk-11.0.6_10"

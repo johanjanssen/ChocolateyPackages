@@ -1,15 +1,20 @@
-﻿$pathToUnInstall = 'C:\Program Files\OpenJDK\openjdk-8u242-b08\bin'
+﻿$programFiles = (${env:ProgramFiles}, ${env:ProgramFiles(x86)} -ne $null)[0]
+$installDir = "$programFiles\OpenJDK"
 
-$actualPath = (Get-EnvironmentVariable -Name 'Path' -Scope 'Machine' -PreserveVariables) -split ';'
+$pathToUnInstall = "$installDir\openjdk-8u242-b08\bin"
+
+$statementTerminator = ";"
+
+$actualPath = [System.Collections.ArrayList](Get-EnvironmentVariable -Name 'Path' -Scope 'Machine' -PreserveVariables).split($statementTerminator)
 
 if ($actualPath -contains $pathToUnInstall)
 {
 	Write-Host "PATH environment variable contains $pathToUnInstall. Removing..."
 	
 	$actualPath.Remove($pathToUnInstall)	
-	$newPath =  $actualPath -Join ';'
+	$newPath =  $actualPath -Join $statementTerminator
 
-	$cmd = "Set-EnvironmentVariable -Name 'Path' -Value $newPath -Scope 'Machine'"
+	$cmd = "Set-EnvironmentVariable -Name 'Path' -Value `'$newPath`' -Scope 'Machine'"
 
     if (Test-ProcessAdminRights) {
         Invoke-Expression $cmd

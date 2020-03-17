@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>    
-    <id>openjdk</id>
+    <id>openjdk14</id>
 	<version>14.0.0</version>
 	<packageSourceUrl>https://github.com/johanjanssen/ChocolateyPackages/tree/master/OpenJDK</packageSourceUrl>
     <title>OpenJDK 14.0.0</title>

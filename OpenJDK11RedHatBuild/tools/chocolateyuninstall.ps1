@@ -1,27 +1,28 @@
-﻿Uninstall-ChocolateyEnvironmentVariable 'JAVA_HOME' 'Machine'
-rm -r 'C:\Program Files\OpenJDK\openjdk-11u-11.0.3+7'
+﻿$programFiles = (${env:ProgramFiles}, ${env:ProgramFiles(x86)} -ne $null)[0]
+$installDir = "$programFiles\OpenJDK"
 
-$pathToUnInstall = 'C:\Program Files\OpenJDK\openjdk-11u-11.0.3+7\bin'
-$pathType = 'Machine'
+Uninstall-ChocolateyEnvironmentVariable 'JAVA_HOME' 'Machine'
+rm -r "$installDir\openjdk-11u-11.0.3+7"
 
-if ($env:PATH.ToLower().Contains($pathToUnInstall.ToLower()))
+$pathToUnInstall = "$installDir\openjdk-11u-11.0.3+7\bin"
+
+$statementTerminator = ";"
+
+$actualPath = [System.Collections.ArrayList](Get-EnvironmentVariable -Name 'Path' -Scope 'Machine' -PreserveVariables).split($statementTerminator)
+
+if ($actualPath -contains $pathToUnInstall)
 {
-	$statementTerminator = ";"
 	Write-Host "PATH environment variable contains $pathToUnInstall. Removing..."
-	$actualPath = [System.Collections.ArrayList](Get-EnvironmentVariable -Name 'Path' -Scope $pathType).split($statementTerminator)
-
+	
 	$actualPath.Remove($pathToUnInstall)	
 	$newPath =  $actualPath -Join $statementTerminator
 
-	if ($pathType -eq [System.EnvironmentVariableTarget]::Machine) {
-		if (Test-ProcessAdminRights) {
-			Set-EnvironmentVariable -Name 'Path' -Value $newPath -Scope $pathType
-		} else {
-			$psArgs = "UnInstall-ChocolateyPath -pathToUnInstall `'$originalPathToUnInstall`' -pathType `'$pathType`'"
-			Start-ChocolateyProcessAsAdmin "$psArgs"
-		}
-	} else {
-		Set-EnvironmentVariable -Name 'Path' -Value $newPath -Scope $pathType
-	}
+	$cmd = "Set-EnvironmentVariable -Name 'Path' -Value `'$newPath`' -Scope 'Machine'"
+
+    if (Test-ProcessAdminRights) {
+        Invoke-Expression $cmd
+    } else {
+        Start-ChocolateyProcessAsAdmin "$cmd"
+    }
 }
 

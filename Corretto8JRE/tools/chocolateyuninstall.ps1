@@ -1,31 +1,33 @@
-﻿Uninstall-ChocolateyEnvironmentVariable 'JAVA_HOME' 'Machine'
-rm -r 'C:\Program Files\Corretto\jre8'
+﻿$programFiles = (${env:ProgramFiles}, ${env:ProgramFiles(x86)} -ne $null)[0]
+$installDir = "$programFiles\Corretto"
 
-$pathToUnInstall = 'C:\Program Files\Corretto\jre8\bin'
-$pathType = 'Machine'
+Uninstall-ChocolateyEnvironmentVariable 'JAVA_HOME' 'Machine'
+rm -r "$installDir\jre8"
 
-if ($env:PATH.ToLower().Contains($pathToUnInstall.ToLower()))
+$pathToUnInstall = "$installDir\jre8\bin"
+
+$statementTerminator = ";"
+
+$actualPath = [System.Collections.ArrayList](Get-EnvironmentVariable -Name 'Path' -Scope 'Machine' -PreserveVariables).split($statementTerminator)
+
+
+if ($actualPath -contains $pathToUnInstall)
 {
-	$statementTerminator = ";"
 	Write-Host "PATH environment variable contains $pathToUnInstall. Removing..."
-	$actualPath = [System.Collections.ArrayList](Get-EnvironmentVariable -Name 'Path' -Scope $pathType).split($statementTerminator)
-
+	
 	$actualPath.Remove($pathToUnInstall)	
 	$newPath =  $actualPath -Join $statementTerminator
 
-	if ($pathType -eq [System.EnvironmentVariableTarget]::Machine) {
-		if (Test-ProcessAdminRights) {
-			Set-EnvironmentVariable -Name 'Path' -Value $newPath -Scope $pathType
-		} else {
-			$psArgs = "UnInstall-ChocolateyPath -pathToUnInstall `'$originalPathToUnInstall`' -pathType `'$pathType`'"
-			Start-ChocolateyProcessAsAdmin "$psArgs"
-		}
-	} else {
-		Set-EnvironmentVariable -Name 'Path' -Value $newPath -Scope $pathType
-	}
+	$cmd = "Set-EnvironmentVariable -Name 'Path' -Value `'$newPath`' -Scope 'Machine'"
+
+    if (Test-ProcessAdminRights) {
+        Invoke-Expression $cmd
+    } else {
+        Start-ChocolateyProcessAsAdmin "$cmd"
+    }
 }
 
-$CorrettoDirectory = 'C:\Program Files\Corretto'
-If ((Get-ChildItem -Force $CorrettoDirectory) -eq $Null) {
-    rmdir $CorrettoDirectory 
+# Remove parent directory if there are no installations left
+If ((Get-ChildItem -Force $installDir) -eq $Null) {
+    rmdir $installDir 
 }

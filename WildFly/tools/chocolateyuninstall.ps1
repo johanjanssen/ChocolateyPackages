@@ -1,6 +1,8 @@
-﻿$WildFlyDirectory = 'C:\Program Files\WildFly' 
+﻿$programFiles = (${env:ProgramFiles}, ${env:ProgramFiles(x86)} -ne $null)[0]
 
-rm -r 'C:\Program Files\WildFly\wildfly-18.0.1.Final'
+$WildFlyDirectory = "$programFiles\WildFly"
+
+rm -r "$WildFlyDirectory\wildfly-18.0.1.Final"
 
 If ((Get-ChildItem -Force $WildFlyDirectory) -eq $Null) {
     rmdir $WildFlyDirectory 

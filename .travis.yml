@@ -16,7 +16,10 @@ env:
   - PACKAGE=Liberica11JDK
   - PACKAGE=Liberica11JRE
   - PACKAGE=LibericaJDK
+  - PACKAGE=LibericaJDKFull
+  - PACKAGE=LibericaJDKLite
   - PACKAGE=LibericaJRE
+  - PACKAGE=LibericaJREFull
   - PACKAGE=ojdkbuild  
   - PACKAGE=ojdkbuild8
   - PACKAGE=ojdkbuild11

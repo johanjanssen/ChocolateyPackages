@@ -12,8 +12,11 @@ env:
   - PACKAGE=GraalVM-Java8
   - PACKAGE=GraalVM-Java11
   - PACKAGE=Liberica8JDK  
+  - PACKAGE=Liberica8JRE
   - PACKAGE=Liberica11JDK
+  - PACKAGE=Liberica11JRE
   - PACKAGE=LibericaJDK
+  - PACKAGE=LibericaJRE
   - PACKAGE=ojdkbuild  
   - PACKAGE=ojdkbuild8
   - PACKAGE=ojdkbuild11
@@ -26,7 +29,9 @@ env:
   - PACKAGE=OpenJDK14
 #  - PACKAGE=OpenJDK8RedHatBuild
   - PACKAGE=SapMachine
+  - PACKAGE=SapMachineJRE
   - PACKAGE=SapMachine11
+  - PACKAGE=SapMachine11JRE
 #  - PACKAGE=SapMachine13  
   - PACKAGE=WildFly
 script:

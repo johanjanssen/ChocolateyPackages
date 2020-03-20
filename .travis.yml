@@ -14,7 +14,9 @@ env:
   - PACKAGE=Liberica8JDK  
   - PACKAGE=Liberica8JRE
   - PACKAGE=Liberica11JDK
+  - PACKAGE=Liberica11JDKFull
   - PACKAGE=Liberica11JRE
+  - PACKAGE=Liberica11JREFull
   - PACKAGE=LibericaJDK
   - PACKAGE=LibericaJDKFull
   - PACKAGE=LibericaJDKLite

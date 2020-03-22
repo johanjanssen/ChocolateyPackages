@@ -4,8 +4,8 @@ $toolsDir = (Split-Path -parent $MyInvocation.MyCommand.Definition)
 $packageArgs = @{
     PackageName      = $env:ChocolateyPackageName
     UnzipLocation    = $toolsDir
-    Url64bit         = 'http://download.bell-sw.com/lmc/bellsoft-lmc7.0-windows-amd64.zip'
-    Checksum64       = 'e3694968827effbce19958747e3b69e08a1dda2a'
+    Url64bit         = 'http://download.bell-sw.com/lmc/bellsoft-lmc7.1-windows-amd64.zip'
+    Checksum64       = 'EFDB60217441C7F164830A8E237E7D6AF7FB978F'
     ChecksumType64   = 'sha1'
 }
 

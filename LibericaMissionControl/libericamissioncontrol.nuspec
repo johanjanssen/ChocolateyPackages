@@ -8,7 +8,7 @@
     <authors>BellSoft</authors>
 	<owners>JohanJanssen</owners>
 	<licenseUrl>https://github.com/JDKMissionControl/jmc/blob/develop/license/LICENSE.txt</licenseUrl>
-    <projectUrl>https://bell-sw.com/pages/lmc/</projectUrl>
+    <projectUrl>https://bell-sw.com/lmc/</projectUrl>
 	<bugTrackerUrl>https://github.com/JDKMissionControl/jmc/issues</bugTrackerUrl>
 	<projectSourceUrl>https://github.com/JDKMissionControl/jmc</projectSourceUrl>
     <tags>liberica mission control profiler java jvm</tags>

@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>    
-    <id>openjdk8</id>
+    <id>openjdk8jre</id>
 	<version>8.252.9</version>
 	<packageSourceUrl>https://github.com/johanjanssen/ChocolateyPackages/tree/master/OpenJDK11</packageSourceUrl>
-    <title>OpenJDK 8</title>
+    <title>OpenJDK 8 JRE</title>
     <authors>Oracle</authors>
 	<owners>JohanJanssen</owners>
 	<licenseUrl>http://openjdk.java.net/legal/</licenseUrl>

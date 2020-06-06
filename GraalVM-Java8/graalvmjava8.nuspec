@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>    
     <id>graalvm-java8</id>
-	<version>20.0.0</version>
+	<version>20.1.0</version>
 	<packageSourceUrl>https://github.com/johanjanssen/ChocolateyPackages/tree/master/GraalVM-Java8</packageSourceUrl>
     <title>GraalVM Java 8</title>
     <authors>Oracle</authors>

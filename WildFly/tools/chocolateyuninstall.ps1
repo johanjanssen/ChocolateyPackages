@@ -2,7 +2,7 @@
 
 $WildFlyDirectory = "$programFiles\WildFly"
 
-rm -r "$WildFlyDirectory\wildfly-18.0.1.Final"
+rm -r "$WildFlyDirectory\wildfly-20.0.1.Final"
 
 If ((Get-ChildItem -Force $WildFlyDirectory) -eq $Null) {
     rmdir $WildFlyDirectory 

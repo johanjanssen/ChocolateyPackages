@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>    
     <id>liberica-mission-control</id>
-	<version>7.1</version>
+	<version>7.1.1</version>
 	<packageSourceUrl>https://github.com/johanjanssen/ChocolateyPackages/tree/master/LibericaMissionControl</packageSourceUrl>
     <title>Liberica Mission Control 64 bit only</title>
     <authors>BellSoft</authors>

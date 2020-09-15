@@ -2,9 +2,9 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>    
     <id>openjdk</id>
-	<version>14.0.2</version>
+	<version>15.0.0</version>
 	<packageSourceUrl>https://github.com/johanjanssen/ChocolateyPackages/tree/master/OpenJDK</packageSourceUrl>
-    <title>OpenJDK 14.0.2</title>
+    <title>OpenJDK 15.0.0</title>
     <authors>Oracle</authors>
 	<owners>JohanJanssen</owners>
 	<licenseUrl>http://openjdk.java.net/legal/</licenseUrl>

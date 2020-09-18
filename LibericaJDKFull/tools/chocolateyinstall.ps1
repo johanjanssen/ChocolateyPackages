@@ -1,7 +1,7 @@
 ﻿$packageArgs = @{
   PackageName = $env:ChocolateyPackageName
-  Url64bit = 'https://download.bell-sw.com/java/14.0.2+13/bellsoft-jdk14.0.2+13-windows-amd64-full.msi'
-  Checksum64 = '541996b4a73fd62956836409f67f57a4763c2308'
+  Url64bit = 'https://download.bell-sw.com/java/15+36/bellsoft-jdk15+36-windows-amd64-full.msi'
+  Checksum64 = '4e8cae12a17393e9586d858e3c7d99297941e9b2'
   ChecksumType64 = 'sha1'
   fileType      = 'msi'
   silentArgs    = "INSTALLLEVEL=3 /quiet"

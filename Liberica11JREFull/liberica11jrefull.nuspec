@@ -1,18 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
-  <metadata>    
+  <metadata>
     <id>liberica11jrefull</id>
-	<version>11.0.9.11</version>
-	<packagesourceurl>https://github.com/johanjanssen/chocolateypackages/tree/master/liberica11jdk</packagesourceurl>
+    <version>11.0.9.11</version>
+    <packagesourceurl>https://github.com/johanjanssen/chocolateypackages/tree/master/liberica11jdk</packagesourceurl>
     <title>liberica 11 jre full includes libericafx and minimal vm</title>
     <authors>bellsoft</authors>
-	<owners>johanjanssen</owners>
-	<licenseurl>https://github.com/bell-sw/liberica/blob/master/license</licenseurl>
+    <owners>johanjanssen</owners>
+    <licenseurl>https://github.com/bell-sw/liberica/blob/master/license</licenseurl>
     <projecturl>https://bell-sw.com/</projecturl>
-	<docsurl>https://bell-sw.com/</docsurl>
-	<mailinglisturl>https://bell-sw.com/</mailinglisturl>
-	<bugtrackerurl>https://github.com/bell-sw/liberica/issues</bugtrackerurl>
-	<projectsourceurl>https://github.com/bell-sw/liberica</projectsourceurl>
+    <docsurl>https://bell-sw.com/</docsurl>
+    <mailinglisturl>https://bell-sw.com/</mailinglisturl>
+    <bugtrackerurl>https://github.com/bell-sw/liberica/issues</bugtrackerurl>
+    <projectsourceurl>https://github.com/bell-sw/liberica</projectsourceurl>
     <tags>liberica java jvm</tags>
     <summary>liberica is an open source java development kit provided by bellsoft</summary>
     <description>liberica is an open source java development kit provided by bellsoft</description>

@@ -1,18 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
-  <metadata>    
+  <metadata>
     <id>graalvm-java8</id>
-	<version>20.2.0</version>
-	<packageSourceUrl>https://github.com/johanjanssen/ChocolateyPackages/tree/master/GraalVM-Java8</packageSourceUrl>
+    <version>20.2.0</version>
+    <packageSourceUrl>https://github.com/johanjanssen/ChocolateyPackages/tree/master/GraalVM-Java8</packageSourceUrl>
     <title>GraalVM Java 8</title>
     <authors>Oracle</authors>
-	<owners>JohanJanssen</owners>
-	<licenseUrl>https://github.com/oracle/graal/blob/master/LICENSE</licenseUrl>
+    <owners>JohanJanssen</owners>
+    <licenseUrl>https://github.com/oracle/graal/blob/master/LICENSE</licenseUrl>
     <projectUrl>https://www.graalvm.org/</projectUrl>
-	<docsUrl>https://www.graalvm.org/docs/</docsUrl>
-	<mailingListUrl>http://mail.openjdk.java.net/mailman/listinfo/graal-dev</mailingListUrl>
-	<bugTrackerUrl>https://github.com/oracle/graal/issues</bugTrackerUrl>
-	<projectSourceUrl>https://github.com/oracle/graal</projectSourceUrl>
+    <docsUrl>https://www.graalvm.org/docs/</docsUrl>
+    <mailingListUrl>http://mail.openjdk.java.net/mailman/listinfo/graal-dev</mailingListUrl>
+    <bugTrackerUrl>https://github.com/oracle/graal/issues</bugTrackerUrl>
+    <projectSourceUrl>https://github.com/oracle/graal</projectSourceUrl>
     <tags>openjdk java jvm</tags>
     <summary>GraalVM is a virtual machine to run applications in different programming languages such as Java, Scala, Kotlin, JavaScript, Python, C, C++ and many more</summary>
     <description>GraalVM is a virtual machine to run applications in different programming languages such as Java, Scala, Kotlin, JavaScript, Python, C, C++ and many more</description>

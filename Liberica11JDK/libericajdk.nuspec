@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>    
     <id>liberica11jdk</id>
-	<version>11.0.8.10</version>
+	<version>11.0.9.11</version>
 	<packageSourceUrl>https://github.com/johanjanssen/ChocolateyPackages/tree/master/Liberica11JDK</packageSourceUrl>
     <title>Liberica 11 JDK</title>
     <authors>BellSoft</authors>

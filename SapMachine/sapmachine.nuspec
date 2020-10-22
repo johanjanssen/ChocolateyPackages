@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>    
     <id>sapmachine</id>
-	<version>15.0.0</version>
+	<version>15.0.1</version>
 	<packageSourceUrl>https://github.com/johanjanssen/ChocolateyPackages/tree/master/SapMachine</packageSourceUrl>
     <title>SapMachine JDK</title>
     <authors>SAP</authors>

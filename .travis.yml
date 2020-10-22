@@ -30,16 +30,10 @@ env:
   - PACKAGE=OpenJDK8JRE
   - PACKAGE=OpenJDK11
   - PACKAGE=OpenJDK11JRE
-#  - PACKAGE=OpenJDK11RedHatBuild
-#  - PACKAGE=OpenJDK12
-#  - PACKAGE=OpenJDK13
-  - PACKAGE=OpenJDK14
-#  - PACKAGE=OpenJDK8RedHatBuild
   - PACKAGE=SapMachine
   - PACKAGE=SapMachineJRE
   - PACKAGE=SapMachine11
   - PACKAGE=SapMachine11JRE
-#  - PACKAGE=SapMachine13  
   - PACKAGE=WildFly
 script:
   - powershell -ExecutionPolicy RemoteSigned -File .travis.ps1

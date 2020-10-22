@@ -1,18 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
-  <metadata>    
+  <metadata>
     <id>wildfly</id>
-	<version>20.0.1</version>
-	<packageSourceUrl>https://github.com/johanjanssen/ChocolateyPackages/tree/master/WildFly</packageSourceUrl>
+    <version>21.0.0</version>
+    <packageSourceUrl>https://github.com/johanjanssen/ChocolateyPackages/tree/master/WildFly</packageSourceUrl>
     <title>WildFly</title>
     <authors>Red Hat</authors>
-	<owners>JohanJanssen</owners>
-	<licenseUrl>https://github.com/wildfly/wildfly/blob/master/LICENSE.txt</licenseUrl>
+    <owners>JohanJanssen</owners>
+    <licenseUrl>https://github.com/wildfly/wildfly/blob/master/LICENSE.txt</licenseUrl>
     <projectUrl>http://wildfly.org/</projectUrl>
-	<docsUrl>https://docs.wildfly.org/</docsUrl>
-	<mailingListUrl>https://lists.jboss.org/mailman/listinfo/wildfly-dev</mailingListUrl>
-	<bugTrackerUrl>https://issues.jboss.org/projects/WFLY</bugTrackerUrl>
-	<projectSourceUrl>https://github.com/wildfly/wildfly</projectSourceUrl>
+    <docsUrl>https://docs.wildfly.org/</docsUrl>
+    <mailingListUrl>https://lists.jboss.org/mailman/listinfo/wildfly-dev</mailingListUrl>
+    <bugTrackerUrl>https://issues.jboss.org/projects/WFLY</bugTrackerUrl>
+    <projectSourceUrl>https://github.com/wildfly/wildfly</projectSourceUrl>
     <tags>wildfly java jvm</tags>
     <summary>WildFly is an open source Java EE application server provided by Red Hat</summary>
     <description>WildFly is an open source Java EE application server provided by Red Hat</description>

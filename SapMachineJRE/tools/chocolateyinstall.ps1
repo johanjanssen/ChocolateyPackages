@@ -1,7 +1,7 @@
 ﻿$packageArgs = @{
   PackageName = $env:ChocolateyPackageName
-  Url64bit = 'https://github.com/SAP/SapMachine/releases/download/sapmachine-15/sapmachine-jre-15_windows-x64_bin.msi'
-  Checksum64 = '219B4C52EB88C7B33BD4073380B1BB6F8D956E9385E57F334C80F5FD36753929'
+  Url64bit = 'https://github.com/SAP/SapMachine/releases/download/sapmachine-15.0.1/sapmachine-jre-15.0.1_windows-x64_bin.msi'
+  Checksum64 = 'DF92C1D42D040DB3AAF103FFE258985C8FE8E3EC3F68007AF01C686C2B353537'
   ChecksumType64 = 'sha256'
   fileType      = 'msi'
   silentArgs    = "INSTALLLEVEL=3 /quiet"

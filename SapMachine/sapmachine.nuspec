@@ -1,18 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
-  <metadata>    
+  <metadata>
     <id>sapmachine</id>
-	<version>15.0.0</version>
-	<packageSourceUrl>https://github.com/johanjanssen/ChocolateyPackages/tree/master/SapMachine</packageSourceUrl>
+    <version>15.0.1</version>
+    <packageSourceUrl>https://github.com/johanjanssen/ChocolateyPackages/tree/master/SapMachine</packageSourceUrl>
     <title>SapMachine JDK</title>
     <authors>SAP</authors>
-	<owners>JohanJanssen</owners>
-	<licenseUrl>https://github.com/SAP/SapMachine/blob/sapmachine/LICENSE</licenseUrl>
+    <owners>JohanJanssen</owners>
+    <licenseUrl>https://github.com/SAP/SapMachine/blob/sapmachine/LICENSE</licenseUrl>
     <projectUrl>https://sap.github.io/SapMachine/</projectUrl>
-	<docsUrl>https://sap.github.io/SapMachine/</docsUrl>
-	<mailingListUrl>https://sap.github.io/SapMachine/</mailingListUrl>
-	<bugTrackerUrl>https://github.com/SAP/SapMachine/issues</bugTrackerUrl>
-	<projectSourceUrl>https://github.com/SAP/SapMachine</projectSourceUrl>
+    <docsUrl>https://sap.github.io/SapMachine/</docsUrl>
+    <mailingListUrl>https://sap.github.io/SapMachine/</mailingListUrl>
+    <bugTrackerUrl>https://github.com/SAP/SapMachine/issues</bugTrackerUrl>
+    <projectSourceUrl>https://github.com/SAP/SapMachine</projectSourceUrl>
     <tags>openjdk java jvm</tags>
     <summary>SapMachine is an open source Java Development Kit provided by SAP</summary>
     <description>SapMachine is an open source Java Development Kit provided by SAP</description>

@@ -1,10 +1,10 @@
-﻿$programFiles = (${env:ProgramFiles}, ${env:ProgramFiles(x86)} -ne $null)[0]
+$programFiles = (${env:ProgramFiles}, ${env:ProgramFiles(x86)} -ne $null)[0]
 $installDir = "$programFiles\GraalVM"
 
 Uninstall-ChocolateyEnvironmentVariable 'JAVA_HOME' 'Machine'
-rm -r "$installDir\graalvm-ce-java8-20.2.0"
+rm -r "$installDir\graalvm-ce-java8-20.3.0"
 
-$pathToUnInstall = "$installDir\graalvm-ce-java8-20.2.0\bin"
+$pathToUnInstall = "$installDir\graalvm-ce-java8-20.3.0\bin"
 
 $statementTerminator = ";"
 

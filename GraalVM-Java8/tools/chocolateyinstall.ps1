@@ -4,8 +4,8 @@ $installDir = "$programFiles\GraalVM"
 $packageArgs = @{
     PackageName      = $env:ChocolateyPackageName
     UnzipLocation    = $targetDir = $installDir
-    Url64            = 'https://github.com/graalvm/graalvm-ce-builds/releases/download/vm-20.3.0/graalvm-ce-java8-windows-amd64-20.3.0-signed.zip'
-    Checksum64       = '69AE260EA5C43CF9AD0C2E75A3015505F953D732DA0BF2924B022D086F042C92'
+    Url64            = 'https://github.com/graalvm/graalvm-ce-builds/releases/download/vm-20.3.0/graalvm-ce-java8-windows-amd64-20.3.0.zip'
+    Checksum64       = '69ae260ea5c43cf9ad0c2e75a3015505f953d732da0bf2924b022d086f042c92'
     ChecksumType64   = 'sha256'
 }
 

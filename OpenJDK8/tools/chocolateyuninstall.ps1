@@ -2,4 +2,4 @@
 $installDir = "$programFiles\OpenJDK"
 
 Uninstall-ChocolateyEnvironmentVariable 'JAVA_HOME' 'Machine'
-rm -r "$installDir\openjdk-8u272-b10"
+rm -r "$installDir\openjdk-8u275-b01"

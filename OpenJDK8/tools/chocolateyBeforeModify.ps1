@@ -1,7 +1,7 @@
 ﻿$programFiles = (${env:ProgramFiles}, ${env:ProgramFiles(x86)} -ne $null)[0]
 $installDir = "$programFiles\OpenJDK"
 
-$pathToUnInstall = "$installDir\openjdk-8u275-b01\bin"
+$pathToUnInstall = "$installDir\openjdk-8u282-b08\bin"
 
 $statementTerminator = ";"
 

@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>ojdkbuild8</id>
-    <version>8.0.275</version>
+    <version>8.0.282</version>
     <packageSourceUrl>https://github.com/johanjanssen/ChocolateyPackages/tree/master/ojdkbuild8</packageSourceUrl>
     <title>ojdkbuild 8 JDK</title>
     <authors>ojdkbuild community</authors>

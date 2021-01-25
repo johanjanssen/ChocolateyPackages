@@ -1,7 +1,7 @@
 ﻿$packageArgs = @{
   PackageName = $env:ChocolateyPackageName
-  Url64bit = 'https://github.com/ojdkbuild/ojdkbuild/releases/download/java-11-openjdk-11.0.9.11-2/java-11-openjdk-11.0.9.11-2.windows.ojdkbuild.x86_64.msi'
-  Checksum64 = 'f486f9037a3baa1be331c8b8493dde59e71591a591fcdb5895d83c4ecb57937f'
+  Url64bit = 'https://github.com/ojdkbuild/ojdkbuild/releases/download/java-11-openjdk-11.0.10.9-1/java-11-openjdk-11.0.10.9-1.windows.ojdkbuild.x86_64.msi'
+  Checksum64 = 'c0f6d1fefe56147c1477b98623fd2391a9dc3b5984879a115d882ed2dcd26e48'
   ChecksumType64 = 'sha256'
   fileType      = 'msi'
   silentArgs    = "INSTALLLEVEL=3 /quiet"

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>mvndaemon</id>
+    <version>0.4.2</version>
+    <packageSourceUrl>https://github.com/mvndaemon/mvnd</packageSourceUrl>
+    <title>Maven Daemon</title>
+    <authors>Open Source Organisation</authors>
+    <owners>JohanJanssen</owners>
+    <licenseUrl>https://github.com/mvndaemon/mvnd/blob/master/LICENSE.txt</licenseUrl>
+    <projectUrl>https://github.com/mvndaemon/mvnd</projectUrl>
+    <docsUrl>https://github.com/mvndaemon/mvnd</docsUrl>
+    <mailingListUrl>https://github.com/mvndaemon/mvnd</mailingListUrl>
+    <bugTrackerUrl>https://github.com/mvndaemon/mvnd/issues</bugTrackerUrl>
+    <projectSourceUrl>https://github.com/mvndaemon/mvnd</projectSourceUrl>
+    <tags>maven mvn daemon graalvm</tags>
+    <summary>The Maven (mvn) Daemon is based on GraalVM and allows for faster Maven builds</summary>
+    <description>The Maven (mvn) Daemon is based on GraalVM and allows for faster Maven builds. Needs a properly configured JAVA_HOME environment variable.</description>
+  </metadata>
+</package>

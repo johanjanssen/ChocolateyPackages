@@ -21,6 +21,7 @@ If ($Env:PACKAGE -eq "WildFly") {
 If ($Env:PACKAGE -eq "JMC" -Or $Env:PACKAGE -eq "AdoptOpenJDKJMC") {
 	try {
 		jmc -version
+		exit 0
 	} catch {
 		echo "jmc -version failed"
 		exit 1

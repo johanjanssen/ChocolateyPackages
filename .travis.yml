@@ -3,7 +3,7 @@
 # https://stackoverflow.com/questions/17794507/reload-the-path-in-powershell
 os: windows
 language: bash  # language: java is not yet supported on Travis CI Windows
-env: 
+env:
   - PACKAGE=Corretto11JDK
   - PACKAGE=Corretto8JDK
   - PACKAGE=Corretto8JRE

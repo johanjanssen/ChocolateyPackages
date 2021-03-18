@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>jmc</id>
+    <version>8.0.0</version>
+    <packageSourceUrl>https://github.com/johanjanssen/ChocolateyPackages/tree/master/JMC</packageSourceUrl>
+    <title>JDK Mission Control (JMC) 64 bit only</title>
+    <authors>Oracle</authors>
+    <owners>JohanJanssen</owners>
+    <licenseUrl>https://github.com/openjdk/jmc/blob/master/license/LICENSE.txt</licenseUrl>
+    <projectUrl>https://wiki.openjdk.java.net/display/jmc/Main</projectUrl>
+    <bugTrackerUrl>https://github.com/JDKMissionControl/jmc/issues</bugTrackerUrl>
+    <projectSourceUrl>https://github.com/openjdk/jmc</projectSourceUrl>
+    <tags>liberica mission control profiler java jvm</tags>
+    <summary>JDK Mission Control (JMC) is a low-overhead Java profiler.</summary>
+    <description>JDK Mission Control (JMC)  is a low-overhead Java profiler. 64 bit only</description>
+  </metadata>
+</package>

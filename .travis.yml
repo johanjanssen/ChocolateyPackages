@@ -22,6 +22,8 @@ env:
   - PACKAGE=LibericaJDKLite
   - PACKAGE=LibericaJRE
   - PACKAGE=LibericaJREFull
+  - PACKAGE=Microsoft-OpenJDK
+  - PACKAGE=Microsoft-OpenJDK11
   - PACKAGE=ojdkbuild  
   - PACKAGE=ojdkbuild8
   - PACKAGE=ojdkbuild11

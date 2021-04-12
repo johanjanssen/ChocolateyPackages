@@ -4,8 +4,8 @@ $toolsDir = (Split-Path -parent $MyInvocation.MyCommand.Definition)
 $packageArgs = @{
     PackageName      = $env:ChocolateyPackageName
     UnzipLocation    = $toolsDir
-    Url64bit         = 'https://ci.adoptopenjdk.net/view/JMC/job/jmc-build/job/8.x.x/lastSuccessfulBuild/artifact/target/products/org.openjdk.jmc-8.0.0-win32.win32.x86_64.zip'
-    Checksum64       = '23C66B2B3CEC2DD9943924F42C375FE882580F966F28EF6F548B27A36EA430A3'
+    Url64bit         = 'https://github.com/AdoptOpenJDK/openjdk-jmc-overrides/releases/download/8.0.0/org.openjdk.jmc-8.0.0-win32.win32.x86_64.zip'
+    Checksum64       = 'D273BEFE4321E007989DA46D6B311B9EF31723BA92701AC4128133D460410894'
     ChecksumType64   = 'sha256'
 }
 

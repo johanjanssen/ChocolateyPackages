@@ -4,8 +4,8 @@ $installDir = "$programFiles\WildFly"
 $packageArgs = @{
     PackageName      = $env:ChocolateyPackageName
     UnzipLocation    = $targetDir = $installDir
-    Url              = 'https://download.jboss.org/wildfly/23.0.0.Final/wildfly-23.0.0.Final.zip'
-    Checksum         = '83e165f34eb85d593117aa51bb4a24ceb6ce8a53'
+    Url              = 'https://download.jboss.org/wildfly/23.0.1.Final/wildfly-23.0.1.Final.zip'
+    Checksum         = '1da1ecc739fea993c450f09e74786ce87a8c4d0e'
     ChecksumType     = 'sha1'
 }
 

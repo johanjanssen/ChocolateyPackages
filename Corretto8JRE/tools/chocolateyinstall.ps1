@@ -4,8 +4,8 @@ $installDir = "$programFiles\Corretto"
 $packageArgs = @{
     PackageName      = $env:ChocolateyPackageName
     UnzipLocation    = $targetDir = $installDir
-    Url64            = 'https://corretto.aws/downloads/resources/8.292.10.1/amazon-corretto-8.292.10.1-windows-x64-jre.zip'
-    Checksum64       = 'cde580c171448d6a5710834676d37a92'
+    Url64            = 'https://corretto.aws/downloads/resources/8.302.08.1/amazon-corretto-8.302.08.1-windows-x64-jre.zip'
+    Checksum64       = 'cc8ab7ee7d7d9a82b76355424fece5c7'
     ChecksumType64   = 'md5'
 }
 

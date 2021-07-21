@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>openjdk11</id>
-    <version>11.0.11.9</version>
+    <version>11.0.12.7</version>
     <packageSourceUrl>https://github.com/johanjanssen/ChocolateyPackages/tree/master/OpenJDK11</packageSourceUrl>
     <title>OpenJDK 11</title>
     <authors>Oracle</authors>

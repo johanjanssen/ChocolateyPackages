@@ -1,7 +1,7 @@
 ﻿$packageArgs = @{
   PackageName = $env:ChocolateyPackageName
-  Url64bit = 'https://aka.ms/download-jdk/microsoft-jdk-11.0.11.9.1-windows-x64.msi'
-  Checksum64 = 'cfbcd0a8c8e983b0ddd94d49476c25cc0b47f7d2289f3fd554cc0a95e5cfe6dd'
+  Url64bit = 'https://aka.ms/download-jdk/microsoft-jdk-11.0.12.7.1-windows-aarch64.msi'
+  Checksum64 = 'fcfa2c3ba490f6b0420e94c05ad0e18ee6265a3343e9fb680f78e7399523a750'
   ChecksumType64 = 'sha256'
   fileType      = 'msi'
   silentArgs    = "INSTALLLEVEL=3 /quiet"

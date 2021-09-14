@@ -32,6 +32,7 @@ env:
   - PACKAGE=OpenJDK8JRE
   - PACKAGE=OpenJDK11
   - PACKAGE=OpenJDK11JRE
+  - PACKAGE=OpenJDK17
   - PACKAGE=SapMachine
   - PACKAGE=SapMachineJRE
   - PACKAGE=SapMachine11

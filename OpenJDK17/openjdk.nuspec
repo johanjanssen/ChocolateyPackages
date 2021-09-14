@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
-    <id>openjdk</id>
+    <id>openjdk17</id>
     <version>17.0.0</version>
-    <packageSourceUrl>https://github.com/johanjanssen/ChocolateyPackages/tree/master/OpenJDK</packageSourceUrl>
+    <packageSourceUrl>https://github.com/johanjanssen/ChocolateyPackages/tree/master/OpenJDK17</packageSourceUrl>
     <title>OpenJDK</title>
     <authors>Oracle</authors>
     <owners>JohanJanssen</owners>

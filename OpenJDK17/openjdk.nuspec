@@ -4,7 +4,7 @@
     <id>openjdk17</id>
     <version>17.0.0</version>
     <packageSourceUrl>https://github.com/johanjanssen/ChocolateyPackages/tree/master/OpenJDK17</packageSourceUrl>
-    <title>OpenJDK</title>
+    <title>OpenJDK 17</title>
     <authors>Oracle</authors>
     <owners>JohanJanssen</owners>
     <licenseUrl>http://openjdk.java.net/legal/</licenseUrl>

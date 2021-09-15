@@ -37,6 +37,8 @@ env:
   - PACKAGE=SapMachineJRE
   - PACKAGE=SapMachine11
   - PACKAGE=SapMachine11JRE
+  - PACKAGE=SapMachine17
+  - PACKAGE=SapMachine17JRE
   - PACKAGE=WildFly
 script:
   - powershell -ExecutionPolicy RemoteSigned -File .travis.ps1

@@ -23,6 +23,11 @@ env:
   - PACKAGE=LibericaJDKLite
   - PACKAGE=LibericaJRE
   - PACKAGE=LibericaJREFull
+  - PACKAGE=Liberica17JDK
+  - PACKAGE=Liberica17JDKFull
+  - PACKAGE=Liberica17JDKLite
+  - PACKAGE=Liberica17JRE
+  - PACKAGE=Liberica17JREFull
   - PACKAGE=Microsoft-OpenJDK
   - PACKAGE=Microsoft-OpenJDK11
   - PACKAGE=ojdkbuild  

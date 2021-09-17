@@ -3,7 +3,7 @@
   <metadata>
     <id>oracle17jdk</id>
     <version>17.0.0</version>
-    <packageSourceUrl>https://github.com/johanjanssen/ChocolateyPackages/tree/master/OracleJDK</packageSourceUrl>
+    <packageSourceUrl>https://github.com/johanjanssen/ChocolateyPackages/tree/master/Oracle17JDK</packageSourceUrl>
     <title>Oracle 17 JDK</title>
     <authors>Oracle</authors>
     <owners>JohanJanssen</owners>

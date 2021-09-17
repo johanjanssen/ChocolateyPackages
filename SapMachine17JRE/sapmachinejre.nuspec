@@ -3,7 +3,7 @@
   <metadata>
     <id>sapmachine17jre</id>
     <version>17.0.0</version>
-    <packageSourceUrl>https://github.com/johanjanssen/ChocolateyPackages/tree/master/SapMachine</packageSourceUrl>
+    <packageSourceUrl>https://github.com/johanjanssen/ChocolateyPackages/tree/master/SapMachine17JRE</packageSourceUrl>
     <title>SapMachine 17 JRE</title>
     <authors>SAP</authors>
     <owners>JohanJanssen</owners>

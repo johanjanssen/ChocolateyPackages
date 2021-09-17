@@ -3,7 +3,7 @@
   <metadata>
     <id>libericajre</id>
     <version>17.0.0</version>
-    <packageSourceUrl>https://github.com/johanjanssen/ChocolateyPackages/tree/master/LibericaJDK</packageSourceUrl>
+    <packageSourceUrl>https://github.com/johanjanssen/ChocolateyPackages/tree/master/LibericaJRE</packageSourceUrl>
     <title>Liberica JRE</title>
     <authors>BellSoft</authors>
     <owners>JohanJanssen</owners>

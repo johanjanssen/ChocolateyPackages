@@ -30,6 +30,7 @@ env:
   - PACKAGE=Liberica17JREFull
   - PACKAGE=Microsoft-OpenJDK
   - PACKAGE=Microsoft-OpenJDK11
+  - PACKAGE=Microsoft-OpenJDK17
   - PACKAGE=ojdkbuild  
   - PACKAGE=ojdkbuild8
   - PACKAGE=ojdkbuild11

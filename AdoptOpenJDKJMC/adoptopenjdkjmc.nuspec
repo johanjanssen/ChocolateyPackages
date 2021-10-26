@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>adoptopenjdk-jmc</id>
-    <version>8.0.0.1</version>
+    <version>8.1.0</version>
     <packageSourceUrl>https://github.com/johanjanssen/ChocolateyPackages/tree/master/AdoptOpenJDKJMC</packageSourceUrl>
     <title>AdoptOpenJDK JDK Mission Control (JMC) 64 bit only</title>
     <authors>AdoptOpenJDK</authors>

@@ -12,6 +12,7 @@ env:
   - PACKAGE=GraalVM
   - PACKAGE=GraalVM-Java8
   - PACKAGE=GraalVM-Java11
+  - PACKAGE=GraalVM-Java17
   - PACKAGE=Liberica8JDK  
   - PACKAGE=Liberica8JRE
   - PACKAGE=Liberica11JDK

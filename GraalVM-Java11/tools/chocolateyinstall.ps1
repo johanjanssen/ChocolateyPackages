@@ -4,12 +4,12 @@ $installDir = "$programFiles\GraalVM"
 $packageArgs = @{
     PackageName      = $env:ChocolateyPackageName
     UnzipLocation    = $targetDir = $installDir
-    Url64            = 'https://github.com/graalvm/graalvm-ce-builds/releases/download/vm-21.2.0/graalvm-ce-java11-windows-amd64-21.2.0.zip'
-    Checksum64       = 'b172dbca4357eaa64dcf81e65e2451a948d581aa203e262c461e521651e050d6'
+    Url64            = 'https://github.com/graalvm/graalvm-ce-builds/releases/download/vm-21.3.0/graalvm-ce-java11-windows-amd64-21.3.0.zip'
+    Checksum64       = 'd9c23ecf4513d0057d3b3f5367b63b6944762f8f9574c5a42bd4522e98e9e9a4'
     ChecksumType64   = 'sha256'
 }
 
 Install-ChocolateyZipPackage @packageArgs
-Install-ChocolateyEnvironmentVariable 'JAVA_HOME' $targetDir\graalvm-ce-java11-21.2.0 'Machine'
+Install-ChocolateyEnvironmentVariable 'JAVA_HOME' $targetDir\graalvm-ce-java11-21.3.0 'Machine'
 # The full path instead of the %JAVA_HOME% is needed so it can be removed with the Chocolatey Uninstall
-Install-ChocolateyPath $targetDir\graalvm-ce-java11-21.2.0\bin -PathType 'Machine'
+Install-ChocolateyPath $targetDir\graalvm-ce-java11-21.3.0\bin -PathType 'Machine'

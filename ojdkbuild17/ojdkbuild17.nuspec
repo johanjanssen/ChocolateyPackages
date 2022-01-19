@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>ojdkbuild17</id>
+    <version>17.0.1.0</version>
+    <packageSourceUrl>https://github.com/johanjanssen/ChocolateyPackages/tree/master/ojdkbuild17</packageSourceUrl>
+    <title>ojdkbuild 17 JDK</title>
+    <authors>ojdkbuild community</authors>
+    <owners>JohanJanssen</owners>
+    <licenseUrl>https://github.com/ojdkbuild/ojdkbuild/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/ojdkbuild/ojdkbuild/wiki/Motivation</projectUrl>
+    <docsUrl>https://github.com/ojdkbuild/ojdkbuild</docsUrl>
+    <mailingListUrl>https://github.com/ojdkbuild/ojdkbuild</mailingListUrl>
+    <bugTrackerUrl>https://github.com/ojdkbuild/ojdkbuild/issues</bugTrackerUrl>
+    <projectSourceUrl>https://github.com/ojdkbuild/ojdkbuild</projectSourceUrl>
+    <tags>ojdkbuild java jdk jvm</tags>
+    <summary>ojdkbuild provides builds of OpenJDK that include additional components such as JavaFX, WebStart, Flight Recorder and Mission Control</summary>
+    <description>ojdkbuild provides builds of OpenJDK that include additional components such as JavaFX, WebStart, Flight Recorder and Mission Control</description>
+  </metadata>
+</package>

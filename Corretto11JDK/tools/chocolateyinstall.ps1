@@ -1,7 +1,7 @@
 ﻿$packageArgs = @{
   PackageName = $env:ChocolateyPackageName
-  Url64bit = 'https://corretto.aws/downloads/resources/11.0.13.8.1/amazon-corretto-11.0.13.8.1-windows-x64.msi'
-  Checksum64 = '285c47a5bdfe2fc30607f45eb5926889'
+  Url64bit = 'https://corretto.aws/downloads/resources/11.0.14.9.1/amazon-corretto-11.0.14.9.1-windows-x64.msi'
+  Checksum64 = 'efc65b68dfe906ce60eb7f41e98b80b8'
   ChecksumType64 = 'md5'
   fileType      = 'msi'
   silentArgs    = "INSTALLLEVEL=3 /quiet"

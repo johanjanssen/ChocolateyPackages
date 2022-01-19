@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>corretto8jdk</id>
-    <version>8.312.07.1</version>
+    <version>8.322.06.2</version>
     <packageSourceUrl>https://github.com/johanjanssen/ChocolateyPackages/tree/master/Corretto8JDK</packageSourceUrl>
     <title>Corretto 8 JDK</title>
     <authors>Amazon</authors>

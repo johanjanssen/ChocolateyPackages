@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>oracle17jdk</id>
-    <version>17.0.1</version>
+    <version>17.0.2</version>
     <packageSourceUrl>https://github.com/johanjanssen/ChocolateyPackages/tree/master/Oracle17JDK</packageSourceUrl>
     <title>Oracle 17 JDK</title>
     <authors>Oracle</authors>

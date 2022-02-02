@@ -10,7 +10,7 @@ env:
   - PACKAGE=Corretto11JDK
   - PACKAGE=Corretto17JDK
   - PACKAGE=GraalVM
-  - PACKAGE=GraalVM-Java8 #deprecaten
+ # - PACKAGE=GraalVM-Java8 #deprecate
   - PACKAGE=GraalVM-Java11
   - PACKAGE=GraalVM-Java17
   - PACKAGE=Liberica8JDK  

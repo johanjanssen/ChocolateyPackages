@@ -1,0 +1,44 @@
+name: Update Temurin Packages
+on:
+  workflow_dispatch:
+    inputs:
+      vendors:
+        description: 'Supply vendors'
+        required: true
+
+jobs:
+  Update-Chocolatey-Packages:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v2
+      - name: Set up JDK
+        uses: actions/setup-java@v2
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+          cache: maven
+      - name: Update packages
+        run: cd updater && mvn spring-boot:run -Dspring-boot.run.profiles=${{ github.event.inputs.vendors }} 
+      - uses: actions/upload-artifact@master
+        with:
+          name: nupkg-files
+          path: **/*.nupkg
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v3
+  Push-Chocolatey-Packages:
+    runs-on: windows-latest
+    environment: 'Push-Packages'
+    needs: Update-Chocolatey-Packages
+    steps:
+      - uses: actions/download-artifact@master
+        with:
+          name: nupkg-files
+      - name: Set API key
+        env:
+          CHOCOLATEY_API_KEY: ${{ secrets.CHOCOLATEY_API_KEY }}
+        run: choco apikey --key "$env:CHOCOLATEY_API_KEY" --source https://push.chocolatey.org/ CHOCOLATEY_API_KEY
+      - name: Push packages
+        run: ls *.nupkg; Get-ChildItem -Filter *.nupkg | Foreach-Object { 	choco push $_ --source https://push.chocolatey.org/}
+        shell: powershell
+

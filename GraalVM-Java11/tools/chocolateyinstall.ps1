@@ -1,5 +1,6 @@
 ﻿$programFiles = (${env:ProgramFiles}, ${env:ProgramFiles(x86)} -ne $null)[0]
 $installDir = "$programFiles\GraalVM"
+$version = "21.3.0"
 
 $packageArgs = @{
     PackageName      = $env:ChocolateyPackageName
@@ -10,6 +11,6 @@ $packageArgs = @{
 }
 
 Install-ChocolateyZipPackage @packageArgs
-Install-ChocolateyEnvironmentVariable 'JAVA_HOME' $targetDir\graalvm-ce-java11-21.3.0 'Machine'
+Install-ChocolateyEnvironmentVariable 'JAVA_HOME' $targetDir\graalvm-ce-java11-$version 'Machine'
 # The full path instead of the %JAVA_HOME% is needed so it can be removed with the Chocolatey Uninstall
-Install-ChocolateyPath $targetDir\graalvm-ce-java11-21.3.0\bin -PathType 'Machine'
+Install-ChocolateyPath $targetDir\graalvm-ce-java11-$version\bin -PathType 'Machine'

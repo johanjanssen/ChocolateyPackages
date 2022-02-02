@@ -5,7 +5,7 @@ $version = "21.3.0"
 $packageArgs = @{
     PackageName = $env:ChocolateyPackageName
     UnzipLocation = $targetDir = $installDir
-    Url64Bit = 'https://github.com/graalvm/graalvm-ce-builds/releases/download/vm-21.3.0/graalvm-ce-java11-windows-amd64-21.3.0.zip'
+    Url64bit = 'https://github.com/graalvm/graalvm-ce-builds/releases/download/vm-21.3.0/graalvm-ce-java11-windows-amd64-21.3.0.zip'
     Checksum64 = 'd9c23ecf4513d0057d3b3f5367b63b6944762f8f9574c5a42bd4522e98e9e9a4'
     ChecksumType64 = 'sha256'
 }

@@ -1,4 +1,4 @@
-name: Push Temurin Packages
+name: Push Chocolatey Packages
 on:
   workflow_dispatch:
     inputs:
@@ -10,7 +10,6 @@ jobs:
   Push-Chocolatey-Packages:
     runs-on: windows-latest
     environment: 'Push-Packages'
-    needs: Update-Chocolatey-Packages
     steps:
       - name: Check out repository code
         uses: actions/checkout@v2

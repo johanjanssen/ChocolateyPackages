@@ -9,7 +9,7 @@ on:
 jobs:
   Push-Chocolatey-Packages:
     runs-on: windows-latest
-    #environment: 'Push-Packages'
+    environment: 'Push-Packages'
     steps:
       - name: Check out repository code
         uses: actions/checkout@v2

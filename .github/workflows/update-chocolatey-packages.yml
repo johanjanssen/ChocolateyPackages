@@ -22,18 +22,11 @@ jobs:
         run: cd updater && mvn spring-boot:run -Dspring-boot.run.profiles=${{ github.event.inputs.vendors }}
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
-      - uses: actions/upload-artifact@master
-        with:
-          name: nupkg-files
-          path: ./**/*.nupkg
   Push-Chocolatey-Packages:
     runs-on: windows-latest
     environment: 'Push-Packages'
     needs: Update-Chocolatey-Packages
     steps:
-      - uses: actions/download-artifact@master
-        with:
-          name: nupkg-files
       - name: Set API key
         env:
           CHOCOLATEY_API_KEY: ${{ secrets.CHOCOLATEY_API_KEY }}

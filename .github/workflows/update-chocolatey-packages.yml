@@ -26,19 +26,3 @@ jobs:
         with:
           name: nupkg-files
           path: ./**/*.nupkg
-  Push-Chocolatey-Packages:
-    runs-on: windows-latest
-    environment: 'Push-Packages'
-    needs: Update-Chocolatey-Packages
-    steps:
-      - uses: actions/download-artifact@master
-        with:
-          name: nupkg-files
-      - name: Set API key
-        env:
-          CHOCOLATEY_API_KEY: ${{ secrets.CHOCOLATEY_API_KEY }}
-        run: choco apikey --key "$env:CHOCOLATEY_API_KEY" --source https://push.chocolatey.org/ CHOCOLATEY_API_KEY
-      - name: Push packages
-        run: Get-ChildItem -Path $path -Recurse -Filter "${{ github.event.inputs.vendors }}*" -Directory | ForEach-Object { if ($_.FullName.EndsWith("MissionControl")){return;} Set-Location $_.FullName; choco pack; choco push $_ --source https://push.chocolatey.org/; cd .. }
-        shell: powershell
-

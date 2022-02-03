@@ -17,7 +17,7 @@
     <summary>GraalVM is a virtual machine to run applications in different programming languages such as Java, Scala, Kotlin, JavaScript, Python, C, C++ and many more</summary>
     <description>Deprecated: GraalVM no longer releases builds for Java 8. This package now installs the latest GraalVM for the latest supported Java version.</description>
     <dependencies>
-      <dependency id="graalvm" version="(22,)" />
+      <dependency id="graalvm" version="(21,)" />
     </dependencies>
   </metadata>
   <files />

@@ -17,8 +17,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-// Tags Sapmachine no 8, sapmachine-11.0.14, sapmachine-17.0.2
-// Versions: java.versions=8u322,11.0.14,17.0.2
 @Service
 @Profile("graalvm")
 public class GraalVMUpdateService extends UpdateService {
@@ -67,13 +65,8 @@ public class GraalVMUpdateService extends UpdateService {
                     logger.info("Checksum found " + asset.getBrowser_download_url());
                     byte[] checksums = restTemplate.getForObject(URI.create(asset.getBrowser_download_url()), byte[].class);
                     String checksumString = new String(checksums, StandardCharsets.UTF_8);
-                    System.out.println("Checksum " + checksumString);
-                    System.out.println("asset.getName " + asset.getName());
                     for (ChocolateyPackageInformation chocolateyPackageInformationItem : chocolateyPackageInformationList) {
-                        System.out.println("url " + chocolateyPackageInformationItem.getUrl());
-                        System.out.println("$ " + asset.getBrowser_download_url() + " -^- " +  asset.getBrowser_download_url().substring(0,asset.getBrowser_download_url().indexOf(".sha256")));
                         if (chocolateyPackageInformationItem.getUrl().equals(asset.getBrowser_download_url().substring(0,asset.getBrowser_download_url().indexOf(".sha256")))) {
-                            System.out.println("in if");
                             chocolateyPackageInformationItem.setChecksum(checksumString);
                         }
                     }

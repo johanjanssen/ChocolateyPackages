@@ -1,7 +1,7 @@
 ﻿$packageArgs = @{
   PackageName = $env:ChocolateyPackageName
-  Url64bit = 'https://download.bell-sw.com/java/17.0.1+12/bellsoft-jre17.0.1+12-windows-amd64.msi'
-  Checksum64 = '63ca415fa95470ff1968a89ae351e1ef0a1b4911'
+  Url64bit = 'https://github.com/bell-sw/Liberica/releases/download/17.0.2%2B9/bellsoft-jre17.0.2%2B9-windows-amd64.msi'
+  Checksum64 = 'b19c42964ffb465f2371de3ff51733bbeec467d1'
   ChecksumType64 = 'sha1'
   fileType      = 'msi'
   silentArgs    = "INSTALLLEVEL=3 /quiet"

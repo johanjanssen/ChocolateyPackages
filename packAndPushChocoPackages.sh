@@ -12,7 +12,6 @@ cd CorrettoJDK && choco pack && choco push
 cd ..
 # cd GraalVM && choco pack && choco push
 # cd ..
-# cd GraalVM-Java8 && choco pack && choco push && cd ..
 # cd GraalVM-Java11 && choco pack && choco push
 # cd ..
 # cd GraalVM-Java17 && choco pack && choco push

@@ -2,9 +2,9 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>graalvm-java8</id>
-    <version>21.2.0</version>
+    <version>21.2.0.1</version>
     <packageSourceUrl>https://github.com/johanjanssen/ChocolateyPackages/tree/master/GraalVM-Java8</packageSourceUrl>
-    <title>GraalVM Java 8</title>
+    <title>[Deprecated]GraalVM Java 8</title>
     <authors>Oracle</authors>
     <owners>JohanJanssen</owners>
     <licenseUrl>https://github.com/oracle/graal/blob/master/LICENSE</licenseUrl>
@@ -15,6 +15,10 @@
     <projectSourceUrl>https://github.com/oracle/graal</projectSourceUrl>
     <tags>openjdk java jvm</tags>
     <summary>GraalVM is a virtual machine to run applications in different programming languages such as Java, Scala, Kotlin, JavaScript, Python, C, C++ and many more</summary>
-    <description>GraalVM is a virtual machine to run applications in different programming languages such as Java, Scala, Kotlin, JavaScript, Python, C, C++ and many more</description>
+    <description>Deprecated: GraalVM no longer releases builds for Java 8. This package now installs the latest GraalVM for the latest supported Java version.</description>
+    <dependencies>
+      <dependency id="graalvm" version="(22,)" />
+    </dependencies>
   </metadata>
+  <files />
 </package>

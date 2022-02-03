@@ -19,13 +19,13 @@ jobs:
           distribution: 'temurin'
           cache: maven
       - name: Update packages
-        run: cd updater && mvn spring-boot:run -Dspring-boot.run.profiles=${{ github.event.inputs.vendors }} 
+        run: cd updater && mvn spring-boot:run -Dspring-boot.run.profiles=${{ github.event.inputs.vendors }}
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v3
       - uses: actions/upload-artifact@master
         with:
           name: nupkg-files
-          path: **/*.nupkg
-      - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v3
+          path: ./**/*.nupkg
   Push-Chocolatey-Packages:
     runs-on: windows-latest
     environment: 'Push-Packages'
@@ -39,6 +39,6 @@ jobs:
           CHOCOLATEY_API_KEY: ${{ secrets.CHOCOLATEY_API_KEY }}
         run: choco apikey --key "$env:CHOCOLATEY_API_KEY" --source https://push.chocolatey.org/ CHOCOLATEY_API_KEY
       - name: Push packages
-        run: ls *.nupkg; Get-ChildItem -Filter *.nupkg | Foreach-Object { 	choco push $_ --source https://push.chocolatey.org/}
+        run: Get-ChildItem -Path $path -Recurse -Filter "${{ github.event.inputs.vendors }}*" -Directory | ForEach-Object { if ($_.FullName.EndsWith("MissionControl")){return;} Set-Location $_.FullName; choco pack; choco push $_ --source https://push.chocolatey.org/; cd .. }
         shell: powershell
 

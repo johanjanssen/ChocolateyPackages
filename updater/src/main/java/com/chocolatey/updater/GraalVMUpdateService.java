@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 import java.net.URI;
+import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.HashMap;
@@ -56,25 +57,26 @@ public class GraalVMUpdateService extends UpdateService {
 
             logger.info("Used assets:");
             for (Asset asset : vendor.getAssets()) {
-                if (asset.getBrowser_download_url().endsWith(".msi")) { //difference
+                if (asset.getBrowser_download_url().endsWith(".zip")) { //difference
                     logger.info("MSI found " + asset.getBrowser_download_url());
                     ChocolateyPackageInformation chocolateyPackageInformation = new ChocolateyPackageInformation();
                     chocolateyPackageInformation.setUrl(asset.getBrowser_download_url());
                     chocolateyPackageInformation.setVersion(tagMap.get(tag));
-
-                    byte[] msiFile = restTemplate.getForObject(URI.create(asset.getBrowser_download_url()), byte[].class);
-
-                    MessageDigest digest = null;
-                    try {
-                        digest = MessageDigest.getInstance("SHA-256");
-                    } catch (NoSuchAlgorithmException e) {
-                        e.printStackTrace();
-                    }
-                    byte[] encodedhash = digest.digest(msiFile);
-                    String sha256 = updateServiceHelper.bytesToHex(encodedhash);
-                    chocolateyPackageInformation.setChecksum(sha256);
-
                     chocolateyPackageInformationList.add(chocolateyPackageInformation);
+                } else if (asset.getName().endsWith(".zip.sha256")) { //difference next lines
+                    logger.info("Checksum found " + asset.getBrowser_download_url());
+                    byte[] checksums = restTemplate.getForObject(URI.create(asset.getBrowser_download_url()), byte[].class);
+                    String checksumString = new String(checksums, StandardCharsets.UTF_8);
+                    System.out.println("Checksum " + checksumString);
+                    System.out.println("asset.getName " + asset.getName());
+                    for (ChocolateyPackageInformation chocolateyPackageInformationItem : chocolateyPackageInformationList) {
+                        System.out.println("url " + chocolateyPackageInformationItem.getUrl());
+                        System.out.println("$ " + asset.getBrowser_download_url() + " -^- " +  asset.getBrowser_download_url().substring(0,asset.getBrowser_download_url().indexOf(".sha256")));
+                        if (chocolateyPackageInformationItem.getUrl().equals(asset.getBrowser_download_url().substring(0,asset.getBrowser_download_url().indexOf(".sha256")))) {
+                            System.out.println("in if");
+                            chocolateyPackageInformationItem.setChecksum(checksumString);
+                        }
+                    }
                 }
             }
         }
@@ -83,13 +85,8 @@ public class GraalVMUpdateService extends UpdateService {
     @Override
     void configureInstallationDirectory(List<ChocolateyPackageInformation> chocolateyPackageInformationList) {
         for (ChocolateyPackageInformation chocolateyPackageInformation : chocolateyPackageInformationList) {
-            String filename = chocolateyPackageInformation.getUrl().substring(chocolateyPackageInformation.getUrl().lastIndexOf("/"));
-            String jdkOrJre = ""; // SapMachine has no JDK in the directory name
-            if (filename.toLowerCase().contains("jre")) {
-                jdkOrJre = "JRE";
-            }
-
-            chocolateyPackageInformation.setDirectory("GraalVM" + chocolateyPackageInformation.getMainVersion() + jdkOrJre);
+            String javaVersion = chocolateyPackageInformation.getUrl().substring(chocolateyPackageInformation.getUrl().indexOf("graalvm-ce-java") + 15,chocolateyPackageInformation.getUrl().indexOf("-windows-amd64-"));
+            chocolateyPackageInformation.setDirectory("GraalVM-Java" + javaVersion);
         }
     }
 }

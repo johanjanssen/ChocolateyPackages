@@ -28,6 +28,9 @@ public class UpdateServiceHelper {
     @Value("${java.versions}")
     private List<String> versions;
 
+    @Value("${graalvm.latest.java}")
+    String graalVMLatestJavaVersion;
+
     RestTemplate restTemplate = new RestTemplate();
 
     ResponseEntity<List<Release>> retrieveReleasesFromAPI(String repositoryName) {
@@ -63,8 +66,13 @@ public class UpdateServiceHelper {
             }
 
             // If version equals latest version: also latest package without the version should be updated
+            boolean graalVMLatestVersion = chocolateyPackageInformation.getDirectory().startsWith("GraalVM") && chocolateyPackageInformation.getUrl().substring(chocolateyPackageInformation.getUrl().indexOf("graalvm-ce-java") + 15,chocolateyPackageInformation.getUrl().indexOf("-windows-amd64-")).equals(graalVMLatestJavaVersion);
             if (chocolateyPackageInformation.getVersion().equals(versions.get(versions.size()-1))) {
                 Path latestChocolateyPackageDirectory = Paths.get(String.join("", chocolateyPackageDirectory.toString().split(chocolateyPackageInformation.getMainVersion())));
+                changeNuspecFile(chocolateyPackageInformation.getNuspecVersion(), latestChocolateyPackageDirectory);
+                changeChocolateyInstallFile(chocolateyPackageInformation, latestChocolateyPackageDirectory);
+            } else if (graalVMLatestVersion) {
+                Path latestChocolateyPackageDirectory = Paths.get(String.join("", chocolateyPackageDirectory.toString().substring(0, chocolateyPackageDirectory.toString().indexOf("-"))));
                 changeNuspecFile(chocolateyPackageInformation.getNuspecVersion(), latestChocolateyPackageDirectory);
                 changeChocolateyInstallFile(chocolateyPackageInformation, latestChocolateyPackageDirectory);
             }
@@ -75,9 +83,27 @@ public class UpdateServiceHelper {
         String installFile = chocolateyPackageDirectory.toString() + File.separator + "tools" + File.separator + "chocolateyinstall.ps1";
         Path path = Paths.get(installFile);
         Stream<String> lines = Files.lines(path);
-        List<String> replaced = lines.map(line -> line.replaceAll("(Url64bit = ').*(')", "$1" + chocolateyPackageInformation.getUrl() + "$2")).map(line -> line.replaceAll("(Checksum64 = ').*(')", "$1" + chocolateyPackageInformation.getChecksum() + "$2")).collect(Collectors.toList());
+
+        List<String> replaced = lines
+                .map(line -> line.replaceAll("(Url64bit = ').*(')", "$1" + chocolateyPackageInformation.getUrl() + "$2"))
+                .map(line -> line.replaceAll("(Checksum64 = ').*(')", "$1" + chocolateyPackageInformation.getChecksum() + "$2"))
+                .map(line -> line.replaceAll("(\\$version = \").*(\")", "$1" + chocolateyPackageInformation.getVersion() + "$2")) // Only needed for zip files
+                .collect(Collectors.toList());
         Files.write(path, replaced);
         lines.close();
+
+        // Zip files require some more configuration.
+        if (chocolateyPackageInformation.getDirectory().startsWith("GraalVM")) {
+            logger.info("Extra configuration steps for zip file");
+            String uninstallFile = chocolateyPackageDirectory.toString() + File.separator + "tools" + File.separator + "chocolateyuninstall.ps1";
+            Path uninstallFilePath = Paths.get(uninstallFile);
+            Stream<String> uninstallFileLines = Files.lines(uninstallFilePath);
+            List<String> replacedUninstallFileLines = uninstallFileLines
+                    .map(line -> line.replaceAll("(\\$version = \").*(\")", "$1" + chocolateyPackageInformation.getVersion() + "$2")) // Only needed for zip files
+                    .collect(Collectors.toList());
+            Files.write(uninstallFilePath, replacedUninstallFileLines);
+            uninstallFileLines.close();
+        }
     }
 
     void changeNuspecFile(String nuspecVersion, Path chocolateyPackageDirectory) throws IOException {

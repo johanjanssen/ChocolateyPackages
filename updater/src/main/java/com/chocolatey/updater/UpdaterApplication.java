@@ -20,7 +20,7 @@ public class UpdaterApplication implements CommandLineRunner {
     // mvn spring-boot:run -Dspring-boot.run.profiles=liberica,ojdkbuild
     @Override
     public void run(String... args) throws Exception {
-        for (UpdateService updateService: updateServiceList) {
+        for (UpdateService updateService : updateServiceList) {
             updateService.start();
         }
     }

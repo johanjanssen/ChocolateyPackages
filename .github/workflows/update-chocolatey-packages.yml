@@ -1,4 +1,4 @@
-name: Update Temurin Packages
+name: Update Chocolatey Packages
 on:
   workflow_dispatch:
     inputs:

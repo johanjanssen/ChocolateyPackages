@@ -10,19 +10,17 @@ import org.springframework.web.client.RestTemplate;
 
 import java.net.URI;
 import java.nio.charset.StandardCharsets;
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
 @Service
-@Profile("graalvm")
-public class GraalVMUpdateService extends UpdateService {
-    Logger logger = LoggerFactory.getLogger(GraalVMUpdateService.class);
+@Profile("wildfly")
+public class WildFlyUpdateService extends UpdateService {
+    Logger logger = LoggerFactory.getLogger(WildFlyUpdateService.class);
 
-    @Value("${graalvm.version}")
+    @Value("${wildfly.version}")
     String version;
 
     Map<String, String> retrieveTagsForVersions(String repositoryName) {
@@ -31,7 +29,7 @@ public class GraalVMUpdateService extends UpdateService {
         Map<String, String> tagMap = new HashMap<>();
 
         for (Release release : releases.getBody()) {
-            if (release.getTag_name().equals("vm-" + version)) {
+            if (release.getTag_name().equals(version)) {
                 tagMap.put(release.getTag_name(), version);
             }
         }
@@ -44,7 +42,7 @@ public class GraalVMUpdateService extends UpdateService {
     void retrieveChocolateyPackageInformation(List<ChocolateyPackageInformation> chocolateyPackageInformationList) {
         RestTemplate restTemplate = new RestTemplate();
 
-        String repositoryName = "graalvm/graalvm-ce-builds";
+        String repositoryName = "wildfly/wildfly";
 
         Map<String, String> tagMap = retrieveTagsForVersions(repositoryName);
 
@@ -55,19 +53,20 @@ public class GraalVMUpdateService extends UpdateService {
 
             logger.info("Used assets:");
             for (Asset asset : vendor.getAssets()) {
-                if (asset.getBrowser_download_url().endsWith(".zip")) { //difference
+                String url = asset.getBrowser_download_url();
+                if (url.endsWith("Final.zip") && Long.valueOf(1).equals(url.chars().filter(ch -> ch == '-').count()) && !url.contains("preview") && !url.contains("servlet") && !url.contains("src")) { //difference
                     logger.info("MSI found " + asset.getBrowser_download_url());
                     ChocolateyPackageInformation chocolateyPackageInformation = new ChocolateyPackageInformation();
                     chocolateyPackageInformation.setUrl(asset.getBrowser_download_url());
-                    chocolateyPackageInformation.setVersion(tagMap.get(tag));
+                    chocolateyPackageInformation.setVersion(tagMap.get(tag).substring(0, tagMap.get(tag).indexOf(".Final")));
                     chocolateyPackageInformationList.add(chocolateyPackageInformation);
-                } else if (asset.getName().endsWith(".zip.sha256")) { //difference next lines
+                } else if (asset.getName().endsWith(".zip.sha1") && Long.valueOf(1).equals(url.chars().filter(ch -> ch == '-').count()) && !url.contains("preview") && !url.contains("servlet") && !url.contains("servlet")) { //difference next lines
                     logger.info("Checksum found " + asset.getBrowser_download_url());
                     byte[] checksums = restTemplate.getForObject(URI.create(asset.getBrowser_download_url()), byte[].class);
                     String checksumString = new String(checksums, StandardCharsets.UTF_8);
                     for (ChocolateyPackageInformation chocolateyPackageInformationItem : chocolateyPackageInformationList) {
-                        if (chocolateyPackageInformationItem.getUrl().equals(asset.getBrowser_download_url().substring(0,asset.getBrowser_download_url().indexOf(".sha256")))) {
-                            chocolateyPackageInformationItem.setChecksum(checksumString);
+                        if (chocolateyPackageInformationItem.getUrl().equals(asset.getBrowser_download_url().substring(0,asset.getBrowser_download_url().indexOf(".sha1")))) {
+                            chocolateyPackageInformationItem.setChecksum(checksumString.trim());
                         }
                     }
                 }
@@ -78,8 +77,7 @@ public class GraalVMUpdateService extends UpdateService {
     @Override
     void configureInstallationDirectory(List<ChocolateyPackageInformation> chocolateyPackageInformationList) {
         for (ChocolateyPackageInformation chocolateyPackageInformation : chocolateyPackageInformationList) {
-            String javaVersion = chocolateyPackageInformation.getUrl().substring(chocolateyPackageInformation.getUrl().indexOf("graalvm-ce-java") + 15,chocolateyPackageInformation.getUrl().indexOf("-windows-amd64-"));
-            chocolateyPackageInformation.setDirectory("GraalVM-Java" + javaVersion);
+            chocolateyPackageInformation.setDirectory("WildFly");
         }
     }
 }

@@ -1,0 +1,26 @@
+name: Push Chocolatey Packages
+on:
+  workflow_dispatch:
+    inputs:
+      vendors:
+        description: 'Supply vendors'
+        required: true
+
+jobs:
+  Push-Chocolatey-Packages:
+    runs-on: windows-latest
+    environment: 'Push-Packages'
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v2
+      - name: Set API key
+        env:
+          CHOCOLATEY_API_KEY: ${{ secrets.CHOCOLATEY_API_KEY }}
+        run: choco apikey --key "$env:CHOCOLATEY_API_KEY" --source https://push.chocolatey.org/ CHOCOLATEY_API_KEY
+      - name: Push packages #TODO: now this only works for one vendor at a time
+        run: >
+          $includefolders="${{ github.event.inputs.vendors }}".replace(',','*,') + "*";
+          $includefoldersArray=$includefolders.Split(",");
+          Get-ChildItem -Path $path -Recurse -Depth 0 -Include $includefoldersArray -Directory | ForEach-Object { if ($_.FullName.EndsWith("MissionControl")){return;} Set-Location $_.FullName; choco pack; choco push --source https://push.chocolatey.org/; cd .. }
+        shell: powershell
+

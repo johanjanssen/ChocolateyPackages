@@ -34,4 +34,3 @@ jobs:
       - name: Push packages
         run: Get-ChildItem -Path $path -Recurse -Filter "${{ github.event.inputs.vendors }}*" -Directory | ForEach-Object { if ($_.FullName.EndsWith("MissionControl")){return;} Set-Location $_.FullName; choco pack; choco push $_ --source https://push.chocolatey.org/; cd .. }
         shell: powershell
-

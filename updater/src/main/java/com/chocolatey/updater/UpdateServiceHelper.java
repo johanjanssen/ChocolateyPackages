@@ -87,16 +87,18 @@ public class UpdateServiceHelper {
         List<String> replaced = lines
                 .map(line -> line.replaceAll("(Url64bit = ').*(')", "$1" + chocolateyPackageInformation.getUrl() + "$2"))
                 .map(line -> line.replaceAll("(Checksum64 = ').*(')", "$1" + chocolateyPackageInformation.getChecksum() + "$2"))
+                .map(line -> line.replaceAll("(Url = ').*(')", "$1" + chocolateyPackageInformation.getUrl() + "$2")) // Only needed for zip files
+                .map(line -> line.replaceAll("(Checksum = ').*(')", "$1" + chocolateyPackageInformation.getChecksum() + "$2")) // Only needed for zip files
                 .map(line -> line.replaceAll("(\\$version = \").*(\")", "$1" + chocolateyPackageInformation.getVersion() + "$2")) // Only needed for zip files
                 .collect(Collectors.toList());
         Files.write(path, replaced);
         lines.close();
 
         // Zip files require some more configuration.
-        if (chocolateyPackageInformation.getDirectory().startsWith("GraalVM")) {
+        Path uninstallFilePath = Paths.get(chocolateyPackageDirectory.toString() + File.separator + "tools" + File.separator + "chocolateyuninstall.ps1");
+        if (Files.exists(uninstallFilePath)) {
             logger.info("Extra configuration steps for zip file");
-            String uninstallFile = chocolateyPackageDirectory.toString() + File.separator + "tools" + File.separator + "chocolateyuninstall.ps1";
-            Path uninstallFilePath = Paths.get(uninstallFile);
+
             Stream<String> uninstallFileLines = Files.lines(uninstallFilePath);
             List<String> replacedUninstallFileLines = uninstallFileLines
                     .map(line -> line.replaceAll("(\\$version = \").*(\")", "$1" + chocolateyPackageInformation.getVersion() + "$2")) // Only needed for zip files

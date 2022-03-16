@@ -4,12 +4,12 @@ $installDir = "$programFiles\OpenJDK"
 $packageArgs = @{
     PackageName      = $env:ChocolateyPackageName
     UnzipLocation    = $targetDir = $installDir
-    Url64            = 'https://download.java.net/java/GA/jdk17.0.1/2a2082e5a09d4267845be086888add4f/12/GPL/openjdk-17.0.1_windows-x64_bin.zip'
-    Checksum64       = '329900a6673b237b502bdcf77bc334da34bc91355c5fd2d457fc00f53fd71ef1'
+    Url64            = 'https://download.java.net/java/GA/jdk17.0.2/dfd4a8d0985749f896bed50d7138ee7f/8/GPL/openjdk-17.0.2_windows-x64_bin.zip'
+    Checksum64       = 'b2208206bda47f2e0c971a39e057a5ec32c40b503d71e486790cb728d926b615'
     ChecksumType64   = 'sha256'
 }
 
 Install-ChocolateyZipPackage @packageArgs
 Install-ChocolateyEnvironmentVariable 'JAVA_HOME' $targetDir\jdk-17.0.1 'Machine'
 # The full path instead of the %JAVA_HOME% is needed so it can be removed with the Chocolatey Uninstall
-Install-ChocolateyPath $targetDir\jdk-17.0.1\bin -PathType 'Machine'
+Install-ChocolateyPath $targetDir\jdk-17.0.2\bin -PathType 'Machine'

@@ -2,13 +2,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>openjdk8</id>
-    <version>8.312.07</version>
-    <packageSourceUrl>https://github.com/johanjanssen/ChocolateyPackages/tree/master/OpenJDK11</packageSourceUrl>
+    <version>8.322.06</version>
+    <packageSourceUrl>https://github.com/johanjanssen/ChocolateyPackages/tree/master/OpenJDK8</packageSourceUrl>
     <title>OpenJDK 8</title>
     <authors>Oracle</authors>
     <owners>JohanJanssen</owners>
     <licenseUrl>http://openjdk.java.net/legal/</licenseUrl>
-    <projectUrl>https://wiki.openjdk.java.net/display/JDKUpdates/JDK11u</projectUrl>
+    <projectUrl>https://wiki.openjdk.java.net/display/jdk8u</projectUrl>
     <docsUrl>http://openjdk.java.net/</docsUrl>
     <mailingListUrl>http://mail.openjdk.java.net/mailman/listinfo</mailingListUrl>
     <bugTrackerUrl>https://bugs.openjdk.java.net</bugTrackerUrl>

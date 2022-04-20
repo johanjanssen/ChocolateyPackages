@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>sapmachinejre</id>
-    <version>18.0.0</version>
+    <version>18.0.1</version>
     <packageSourceUrl>https://github.com/johanjanssen/ChocolateyPackages/tree/master/SapMachineJRE</packageSourceUrl>
     <title>SapMachine JRE</title>
     <authors>SAP</authors>

@@ -63,7 +63,7 @@ public class LibericaUpdateService extends UpdateService {
                     checksumString.lines().filter(l -> l.endsWith(".msi") && l.contains("amd64")).forEach(l -> {
                         String[] values = l.split(" ");
                         for (ChocolateyPackageInformation chocolateyPackageInformationItem : chocolateyPackageInformationList) {
-                            if (chocolateyPackageInformationItem.getUrl().equals(nameURLMap.get(values[2]))) {
+                            if (chocolateyPackageInformationItem.getUrl().equals(nameURLMap.get(values[1]))) {
                                 chocolateyPackageInformationItem.setChecksum(values[0]);
                             }
                         }

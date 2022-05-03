@@ -1,12 +1,12 @@
 ﻿$programFiles = (${env:ProgramFiles}, ${env:ProgramFiles(x86)} -ne $null)[0]
 $installDir = "$programFiles\GraalVM"
-$version = "22.0.0.2"
+$version = "22.1.0"
 
 $packageArgs = @{
     PackageName = $env:ChocolateyPackageName
     UnzipLocation = $targetDir = $installDir
-    Url64bit = 'https://github.com/graalvm/graalvm-ce-builds/releases/download/vm-22.0.0.2/graalvm-ce-java11-windows-amd64-22.0.0.2.zip'
-    Checksum64 = '98bc25635b44ef2eaeeed4351e58c0db1a1eb4f6abf7b9757f941f326396bb3a'
+    Url64bit = 'https://github.com/graalvm/graalvm-ce-builds/releases/download/vm-22.1.0/graalvm-ce-java11-windows-amd64-22.1.0.zip'
+    Checksum64 = 'c7a29f73f626fcf2a482d6ee9d1c728d09248c948b5322988e0886ad4e9255b2'
     ChecksumType64 = 'sha256'
 }
 

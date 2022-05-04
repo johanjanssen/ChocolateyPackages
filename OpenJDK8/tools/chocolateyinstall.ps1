@@ -4,12 +4,12 @@ $installDir = "$programFiles\OpenJDK"
 $packageArgs = @{
     PackageName      = $env:ChocolateyPackageName
     UnzipLocation    = $targetDir = $installDir
-    Url64            = 'https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u322-b06/OpenJDK8U-jdk_x64_windows_8u322b06.zip'
-    Checksum64       = '624D7561D83BDFC0AA0E34F05824FCAC1D3ED440C05C60A4D48B7B1396C2984C'
+    Url64            = 'https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u332-b09/OpenJDK8U-jdk_x64_windows_8u332b09.zip'
+    Checksum64       = '5eb2aaa03e093a518a897c06cd256f74c8a646ff0627463c45c4086882f53a3e'
     ChecksumType64   = 'sha256'
 }
 
 Install-ChocolateyZipPackage @packageArgs
-Install-ChocolateyEnvironmentVariable 'JAVA_HOME' $targetDir\openjdk-8u322-b06 'Machine'
+Install-ChocolateyEnvironmentVariable 'JAVA_HOME' $targetDir\openjdk-8u332-b09 'Machine'
 # The full path instead of the %JAVA_HOME% is needed so it can be removed with the Chocolatey Uninstall
-Install-ChocolateyPath $targetDir\openjdk-8u322-b06\bin -PathType 'Machine'
+Install-ChocolateyPath $targetDir\openjdk-8u332-b09\bin -PathType 'Machine'

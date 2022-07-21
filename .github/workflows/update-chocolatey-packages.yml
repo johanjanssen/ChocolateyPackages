@@ -18,6 +18,8 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
           cache: maven
+      - name: Log vendors
+        run: echo ${{ github.event.inputs.vendors }}
       - name: Update packages
         run: cd updater && mvn spring-boot:run -Dspring-boot.run.profiles=${{ github.event.inputs.vendors }}
       - name: Create Pull Request

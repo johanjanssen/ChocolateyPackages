@@ -19,6 +19,6 @@ jobs:
         run: choco apikey --key "$env:CHOCOLATEY_API_KEY" --source https://push.chocolatey.org/ CHOCOLATEY_API_KEY
       - name: Push packages
         run: >
-          cd ${{ github.event.inputs.directory }}; choco pack; choco push --source https://push.chocolatey.org/; cd .. }
+          cd ${{ github.event.inputs.directory }}; choco pack; choco push --source https://push.chocolatey.org/
         shell: powershell
 

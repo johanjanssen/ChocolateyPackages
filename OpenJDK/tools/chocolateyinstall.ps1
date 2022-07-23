@@ -4,12 +4,12 @@ $installDir = "$programFiles\OpenJDK"
 $packageArgs = @{
     PackageName      = $env:ChocolateyPackageName
     UnzipLocation    = $targetDir = $installDir
-    Url64            = 'https://download.java.net/java/GA/jdk18.0.1.1/65ae32619e2f40f3a9af3af1851d6e19/2/GPL/openjdk-18.0.1.1_windows-x64_bin.zip'
-    Checksum64       = 'a970b922a05a7fc2b077c89bf96c74570f65695b2ba067dc81805107517d7fed'
+    Url64            = 'https://download.java.net/java/GA/jdk18.0.2/f6ad4b4450fd4d298113270ec84f30ee/9/GPL/openjdk-18.0.2_windows-x64_bin.zip'
+    Checksum64       = '441f2bfa18f318995d305d06c2326b1145b27dd08521cef5dacc561867cfee5c'
     ChecksumType64   = 'sha256'
 }
 
 Install-ChocolateyZipPackage @packageArgs
-Install-ChocolateyEnvironmentVariable 'JAVA_HOME' $targetDir\jdk-18.0.1.1 'Machine'
+Install-ChocolateyEnvironmentVariable 'JAVA_HOME' $targetDir\jdk-18.0.2 'Machine'
 # The full path instead of the %JAVA_HOME% is needed so it can be removed with the Chocolatey Uninstall
-Install-ChocolateyPath $targetDir\jdk-18.0.1.1\bin -PathType 'Machine'
+Install-ChocolateyPath $targetDir\jdk-18.0.2\bin -PathType 'Machine'

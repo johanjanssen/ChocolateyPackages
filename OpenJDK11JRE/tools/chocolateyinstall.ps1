@@ -5,7 +5,7 @@ $packageArgs = @{
     PackageName      = $env:ChocolateyPackageName
     UnzipLocation    = $targetDir = $installDir
     Url64            = 'https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.16%2B8/OpenJDK11U-jre_x64_windows_11.0.16_8.zip'
-    Checksum64       = '648a7008d3f79d6ca20c49038c4c598f04a48121c8dfbed879fc6a793f92710e'
+    Checksum64       = '61cb0cf14b6af762e39432301efa2f12b8cbe1a528b91f57b5a0a813cd6b2e98'
     ChecksumType64   = 'sha256'
 }
 

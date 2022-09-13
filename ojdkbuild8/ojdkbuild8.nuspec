@@ -15,7 +15,10 @@
     <projectSourceUrl>https://github.com/ojdkbuild/ojdkbuild</projectSourceUrl>
     <tags>ojdkbuild java jdk jvm</tags>
     <summary>ojdkbuild provides builds of OpenJDK that include additional components such as JavaFX, WebStart, Flight Recorder and Mission Control</summary>
-    <description>Deprecated as the project is no longer maintained: https://github.com/ojdkbuild/ojdkbuild. ojdkbuild provides builds of OpenJDK that include additional components such as JavaFX, WebStart, Flight Recorder and Mission Control</description>
+    <description>Deprecated as the project is no longer maintained: https://github.com/ojdkbuild/ojdkbuild. This package now installs Adoptium Temurin. ojdkbuild provides builds of OpenJDK that include additional components such as JavaFX, WebStart, Flight Recorder and Mission Control</description>
+    <dependencies>
+      <dependency id="Temurin" version="(8,)" />
+    </dependencies>
   </metadata>
   <files />
 </package>

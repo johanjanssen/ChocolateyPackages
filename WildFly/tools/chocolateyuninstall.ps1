@@ -1,5 +1,5 @@
 ﻿$programFiles = (${env:ProgramFiles}, ${env:ProgramFiles(x86)} -ne $null)[0]
-$version = "26.1.2"
+$version = "26.1.1"
 
 $WildFlyDirectory = "$programFiles\WildFly"
 

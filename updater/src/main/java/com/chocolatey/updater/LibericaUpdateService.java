@@ -61,7 +61,13 @@ public class LibericaUpdateService extends UpdateService {
                     byte[] checksums = restTemplate.getForObject(URI.create(asset.getBrowser_download_url()), byte[].class);
                     String checksumString = new String(checksums, StandardCharsets.UTF_8);
                     checksumString.lines().filter(l -> l.endsWith(".msi") && l.contains("amd64")).forEach(l -> {
-                        String[] values = l.split(" ");
+                        // For some reason sometimes there's one space and sometimes two
+                        String[] values;
+                        if (l.contains("  ")) {
+                            values = l.split("  ");
+                        } else {
+                            values = l.split(" ");
+                        }
                         for (ChocolateyPackageInformation chocolateyPackageInformationItem : chocolateyPackageInformationList) {
                             if (chocolateyPackageInformationItem.getUrl().equals(nameURLMap.get(values[1]))) {
                                 chocolateyPackageInformationItem.setChecksum(values[0]);

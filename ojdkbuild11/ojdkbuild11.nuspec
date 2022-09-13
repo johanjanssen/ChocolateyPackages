@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>ojdkbuild11</id>
-    <version>11.0.15.20220913</version>
+    <version>11.0.15.20220914</version>
     <packageSourceUrl>https://github.com/johanjanssen/ChocolateyPackages/tree/master/ojdkbuild11</packageSourceUrl>
     <title>[Deprecated] ojdkbuild 11 JDK</title>
     <authors>ojdkbuild community</authors>
@@ -17,7 +17,7 @@
     <summary>ojdkbuild provides builds of OpenJDK that include additional components such as JavaFX, WebStart, Flight Recorder and Mission Control</summary>
     <description>Deprecated as the project is no longer maintained: https://github.com/ojdkbuild/ojdkbuild. This package now installs Adoptium Temurin. ojdkbuild provides builds of OpenJDK that include additional components such as JavaFX, WebStart, Flight Recorder and Mission Control</description>
     <dependencies>
-      <dependency id="Temurin" version="(11,)" />
+      <dependency id="Temurin11" version="(11,)" />
     </dependencies>
   </metadata>
   <files />

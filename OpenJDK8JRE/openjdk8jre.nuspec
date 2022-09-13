@@ -2,9 +2,9 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>openjdk8jre</id>
-    <version>8.342.07</version>
+    <version>8.342.07.20220913</version>
     <packageSourceUrl>https://github.com/johanjanssen/ChocolateyPackages/tree/master/OpenJDK8</packageSourceUrl>
-    <title>OpenJDK 8 JRE</title>
+    <title>[Deprecated] OpenJDK 8 JRE</title>
     <authors>Oracle</authors>
     <owners>JohanJanssen</owners>
     <licenseUrl>http://openjdk.java.net/legal/</licenseUrl>
@@ -15,6 +15,10 @@
     <projectSourceUrl>https://github.com/openjdk/</projectSourceUrl>
     <tags>openjdk java jvm</tags>
     <summary>OpenJDK is an open source Java Development Kit provided by Oracle</summary>
-    <description>OpenJDK is an open source Java Development Kit provided by Oracle</description>
+    <description>Deprecated as the project is no longer maintained: https://adoptopenjdk.net/upstream.html. This package now installs Adoptium Temurin. OpenJDK is an open source Java Development Kit provided by Oracle</description>
+    <dependencies>
+      <dependency id="Temurin8jre" version="(8,)" />
+    </dependencies>
   </metadata>
+  <files />
 </package>

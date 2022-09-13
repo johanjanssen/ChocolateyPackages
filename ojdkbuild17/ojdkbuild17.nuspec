@@ -2,9 +2,9 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>ojdkbuild17</id>
-    <version>17.0.2</version>
+    <version>17.0.2.20220913</version>
     <packageSourceUrl>https://github.com/johanjanssen/ChocolateyPackages/tree/master/ojdkbuild17</packageSourceUrl>
-    <title>ojdkbuild 17 JDK</title>
+    <title>[Deprecated] ojdkbuild 17 JDK</title>
     <authors>ojdkbuild community</authors>
     <owners>JohanJanssen</owners>
     <licenseUrl>https://github.com/ojdkbuild/ojdkbuild/blob/master/LICENSE</licenseUrl>
@@ -15,6 +15,6 @@
     <projectSourceUrl>https://github.com/ojdkbuild/ojdkbuild</projectSourceUrl>
     <tags>ojdkbuild java jdk jvm</tags>
     <summary>ojdkbuild provides builds of OpenJDK that include additional components such as JavaFX, WebStart, Flight Recorder and Mission Control</summary>
-    <description>ojdkbuild provides builds of OpenJDK that include additional components such as JavaFX, WebStart, Flight Recorder and Mission Control</description>
+    <description>Deprecated as the project is no longer maintained: https://github.com/ojdkbuild/ojdkbuild. ojdkbuild provides builds of OpenJDK that include additional components such as JavaFX, WebStart, Flight Recorder and Mission Control</description>
   </metadata>
 </package>

@@ -17,4 +17,5 @@
     <summary>ojdkbuild provides builds of OpenJDK that include additional components such as JavaFX, WebStart, Flight Recorder and Mission Control</summary>
     <description>Deprecated as the project is no longer maintained: https://github.com/ojdkbuild/ojdkbuild. ojdkbuild provides builds of OpenJDK that include additional components such as JavaFX, WebStart, Flight Recorder and Mission Control</description>
   </metadata>
+  <files />
 </package>

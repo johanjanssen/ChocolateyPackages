@@ -112,6 +112,10 @@ public class UpdateServiceHelper {
         Files.walk(chocolateyPackageDirectory).filter(path -> Files.isRegularFile(path) && path.toString().endsWith(".nuspec")).forEach(path -> {
             try {
                 Stream<String> lines = Files.lines(path);
+                // Major versions don't contain .0.0, so it should be added
+                if (!nuspecVersion.contains(".")) {
+                    nuspecVersion + ".0.0";
+                }
                 List<String> replaced = lines.map(line -> line.replaceAll("(<version>).*(</version>)", "$1" + nuspecVersion + "$2")).collect(Collectors.toList());;
                 Files.write(path, replaced);
                 lines.close();

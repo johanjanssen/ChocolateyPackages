@@ -1,7 +1,7 @@
 ﻿$programFiles = (${env:ProgramFiles}, ${env:ProgramFiles(x86)} -ne $null)[0]
 $installDir = "$programFiles\mvndaemon"
 
-$pathToUnInstall = "$installDir\mvnd-0.8.0-windows-amd64\bin"
+$pathToUnInstall = "$installDir\maven-mvnd-0.8.2-windows-amd64\bin"
 
 $statementTerminator = ";"
 

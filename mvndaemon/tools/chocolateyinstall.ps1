@@ -4,10 +4,10 @@ $installDir = "$programFiles\mvndaemon"
 $packageArgs = @{
     PackageName      = $env:ChocolateyPackageName
     UnzipLocation    = $targetDir = $installDir
-    Url64            = 'https://dist.apache.org/repos/dist/release/maven/mvnd/0.8.0/maven-mvnd-0.8.0-windows-amd64.zip'
-    Checksum64       = 'eda5d83085b2ddf3c31ba849c0f72a340e9ac5f4b3f002dce060b3fad7733a84'
+    Url64            = 'https://github.com/apache/maven-mvnd/releases/download/0.8.2/maven-mvnd-0.8.2-windows-amd64.zip'
+    Checksum64       = 'bfe6115b643ecb54b52a46df9e5b790035e54e67e21c10f964c7d58f633b7f22'
     ChecksumType64   = 'sha256'
 }
 
 Install-ChocolateyZipPackage @packageArgs
-Install-ChocolateyPath $targetDir\mvnd-0.8.0-windows-amd64\bin -PathType 'Machine'
+Install-ChocolateyPath $targetDir\maven-mvnd-0.8.2-windows-amd64\bin -PathType 'Machine'

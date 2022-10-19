@@ -19,20 +19,29 @@ import java.util.stream.Collectors;
 public class CorrettoUpdateService extends UpdateService {
     Logger logger = LoggerFactory.getLogger(CorrettoUpdateService.class);
 
-    Map<String, String> retrieveTagsForVersions(String repositoryName) {
+    Map<String, String> retrieveTagsForVersions(String repositoryName, String majorVersionString) {
         ResponseEntity<List<Release>> releases = updateServiceHelper.retrieveReleasesFromAPI(repositoryName);
 
         Map<String, String> tagMap = new HashMap<>();
 
+        boolean versionFoundInGitTags = false;
+
         for (String version : versions) {
-            version = version.replace("u", ".");
-            //if (version.startsWith("17.")) {
+            // Only retrieve the version for this Git repo
+            if (version.startsWith(majorVersionString)) {
+                version = version.replace("u", ".");
+                //if (version.startsWith("17.")) {
                 for (Release release : releases.getBody()) {
                     if (release.getTag_name().contains(version)) {
                         tagMap.put(release.getTag_name(), version);
+                        versionFoundInGitTags = true;
                     }
                 }
-            //}
+                //}
+                if (!versionFoundInGitTags) {
+                    logger.error("Version " + version + " not found in the Git tags for " + this.getClass());
+                }
+            }
         }
 
         // Improve check as there's only one tag
@@ -51,7 +60,7 @@ public class CorrettoUpdateService extends UpdateService {
             String[] versionStrings = version.split("(u)|(\\.)");
             String repositoryName =  "corretto/corretto-" + versionStrings[0];
 
-            Map<String, String> tagMap = retrieveTagsForVersions(repositoryName);
+            Map<String, String> tagMap = retrieveTagsForVersions(repositoryName, versionStrings[0]);
 
             String tmpTag = String.valueOf(tagMap.keySet().toArray()[0]);
             // For 8.322 the latest tag doesn't contain the MSI

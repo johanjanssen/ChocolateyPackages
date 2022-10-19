@@ -77,7 +77,7 @@ public class CorrettoUpdateService extends UpdateService {
                 logger.info("Body: " + vendor.getBody());
             }
 
-            vendor.getBody().lines().filter(l -> l.contains("windows-x64.msi") || l.contains("windows-x64-jdk.msi")).forEach(l -> { // fixing this one
+            vendor.getBody().lines().filter(l -> l.contains("windows-x64.msi") || l.contains("windows-x64-jdk.msi") || l.contains("windows-x64-jre.msi")).forEach(l -> { // fixing this one
                 String url = l.substring(l.indexOf("(https://corretto.aws/downloads/resources")+1, l.indexOf(".msi)")+4);
                 String checksum = l.substring(l.indexOf("| `")+3, l.indexOf("` /<br />"));
                 ChocolateyPackageInformation chocolateyPackageInformation = new ChocolateyPackageInformation();

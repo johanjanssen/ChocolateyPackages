@@ -27,8 +27,12 @@ public class SapMachineUpdateService extends UpdateService {
     @Value("${sapmachine.versions}")
     List<String> versions;
 
+    public SapMachineUpdateService(List<String> versions) {
+        super(versions);
+    }
+
     Map<String, String> retrieveTagsForVersions(String repositoryName) {
-        ResponseEntity<List<Release>> releases = updateServiceHelper.retrieveReleasesFromAPI(repositoryName);
+        ResponseEntity<List<Release>> releases = getUpdateServiceHelper().retrieveReleasesFromAPI(repositoryName);
 
         Map<String, String> tagMap = new HashMap<>();
 
@@ -44,7 +48,7 @@ public class SapMachineUpdateService extends UpdateService {
             }
         }
 
-        updateServiceHelper.tagLoggingAndVerification(tagMap, this.getClass().getName());
+        getUpdateServiceHelper().tagLoggingAndVerificationMultipleVersions(tagMap, this.getClass().getName(), versions);
         return tagMap;
     }
 
@@ -78,7 +82,7 @@ public class SapMachineUpdateService extends UpdateService {
                         e.printStackTrace();
                     }
                     byte[] encodedhash = digest.digest(msiFile);
-                    String sha256 = updateServiceHelper.bytesToHex(encodedhash);
+                    String sha256 = getUpdateServiceHelper().bytesToHex(encodedhash);
                     chocolateyPackageInformation.setChecksum(sha256);
 
                     chocolateyPackageInformationList.add(chocolateyPackageInformation);

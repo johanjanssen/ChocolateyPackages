@@ -23,8 +23,12 @@ public class CorrettoUpdateService extends UpdateService {
     @Value("${corretto.versions}")
     List<String> versions;
 
+    public CorrettoUpdateService(List<String> versions) {
+        super(versions);
+    }
+
     Map<String, String> retrieveTagsForVersions(String repositoryName, String majorVersionString) {
-        ResponseEntity<List<Release>> releases = updateServiceHelper.retrieveReleasesFromAPI(repositoryName);
+        ResponseEntity<List<Release>> releases = getUpdateServiceHelper().retrieveReleasesFromAPI(repositoryName);
 
         Map<String, String> tagMap = new HashMap<>();
 
@@ -49,7 +53,7 @@ public class CorrettoUpdateService extends UpdateService {
         }
 
         // Improve check as there's only one tag
-        updateServiceHelper.tagLoggingAndVerification(tagMap, this.getClass().getName());
+        getUpdateServiceHelper().tagLoggingAndVerificationMultipleVersions(tagMap, this.getClass().getName(), versions);
         return tagMap;
     }
 

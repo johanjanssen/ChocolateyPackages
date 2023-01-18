@@ -23,8 +23,12 @@ public class WildFlyUpdateService extends UpdateService {
     @Value("${wildfly.version}")
     String version;
 
+    public WildFlyUpdateService(List<String> versions) {
+        super(versions);
+    }
+
     Map<String, String> retrieveTagsForVersions(String repositoryName) {
-        ResponseEntity<List<Release>> releases = updateServiceHelper.retrieveReleasesFromAPI(repositoryName);
+        ResponseEntity<List<Release>> releases = getUpdateServiceHelper().retrieveReleasesFromAPI(repositoryName);
 
         Map<String, String> tagMap = new HashMap<>();
 
@@ -34,7 +38,7 @@ public class WildFlyUpdateService extends UpdateService {
             }
         }
 
-        updateServiceHelper.tagLoggingAndVerification(tagMap, this.getClass().getName());
+        getUpdateServiceHelper().tagLoggingAndVerificationSingleVersion(tagMap, this.getClass().getName());
         return tagMap;
     }
 

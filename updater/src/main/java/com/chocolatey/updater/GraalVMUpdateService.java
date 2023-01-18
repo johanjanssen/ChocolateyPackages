@@ -25,8 +25,12 @@ public class GraalVMUpdateService extends UpdateService {
     @Value("${graalvm.version}")
     String version;
 
+    public GraalVMUpdateService(List<String> versions) {
+        super(versions);
+    }
+
     Map<String, String> retrieveTagsForVersions(String repositoryName) {
-        ResponseEntity<List<Release>> releases = updateServiceHelper.retrieveReleasesFromAPI(repositoryName);
+        ResponseEntity<List<Release>> releases = getUpdateServiceHelper().retrieveReleasesFromAPI(repositoryName);
 
         Map<String, String> tagMap = new HashMap<>();
 
@@ -36,7 +40,7 @@ public class GraalVMUpdateService extends UpdateService {
             }
         }
 
-        updateServiceHelper.tagLoggingAndVerification(tagMap, this.getClass().getName());
+        getUpdateServiceHelper().tagLoggingAndVerificationSingleVersion(tagMap, this.getClass().getName());
         return tagMap;
     }
 

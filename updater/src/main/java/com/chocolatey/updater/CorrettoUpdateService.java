@@ -2,7 +2,6 @@ package com.chocolatey.updater;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Profile;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
@@ -19,9 +18,6 @@ import java.util.stream.Collectors;
 @Profile("corretto")
 public class CorrettoUpdateService extends UpdateService {
     Logger logger = LoggerFactory.getLogger(CorrettoUpdateService.class);
-
-    @Value("${corretto.versions}")
-    List<String> versions;
 
     Map<String, String> retrieveTagsForVersions(String repositoryName, String majorVersionString) {
         ResponseEntity<List<Release>> releases = updateServiceHelper.retrieveReleasesFromAPI(repositoryName);

@@ -24,12 +24,8 @@ public class LibericaUpdateService extends UpdateService {
     @Value("${liberica.versions}")
     List<String> versions;
 
-    public LibericaUpdateService(List<String> versions) {
-        super(versions);
-    }
-
     Map<String, String> retrieveTagsForVersions(String repositoryName) {
-        ResponseEntity<List<Release>> releases = getUpdateServiceHelper().retrieveReleasesFromAPI(repositoryName);
+        ResponseEntity<List<Release>> releases = updateServiceHelper.retrieveReleasesFromAPI(repositoryName);
 
         Map<String, String> tagMap = new HashMap<>();
 
@@ -41,7 +37,7 @@ public class LibericaUpdateService extends UpdateService {
             }
         }
 
-        getUpdateServiceHelper().tagLoggingAndVerificationMultipleVersions(tagMap, this.getClass().getName(), versions);
+        updateServiceHelper.tagLoggingAndVerification(tagMap, this.getClass().getName());
 
         return tagMap;
     }

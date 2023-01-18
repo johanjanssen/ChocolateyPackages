@@ -9,20 +9,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public abstract class UpdateService {
-    private Logger logger = LoggerFactory.getLogger(UpdateService.class);
+    Logger logger = LoggerFactory.getLogger(UpdateService.class);
 
     @Autowired
-    private UpdateServiceHelper updateServiceHelper;
-
-    private final List<String> versions;
-
-    public UpdateService(List<String> versions) {
-        this.versions = versions;
-    }
-
-    public UpdateServiceHelper getUpdateServiceHelper() {
-        return updateServiceHelper;
-    }
+    UpdateServiceHelper updateServiceHelper;
 
     public void start() throws Exception {
         List<ChocolateyPackageInformation> chocolateyPackageInformationList = new ArrayList<>();
@@ -32,7 +22,7 @@ public abstract class UpdateService {
         for (ChocolateyPackageInformation chocolateyPackageInformation : chocolateyPackageInformationList) {
             logger.info(chocolateyPackageInformation.toString());
         }
-        updateServiceHelper.changeChocolateyConfiguration(chocolateyPackageInformationList, versions);
+        updateServiceHelper.changeChocolateyConfiguration(chocolateyPackageInformationList);
     }
 
     abstract void retrieveChocolateyPackageInformation(List<ChocolateyPackageInformation> chocolateyPackageInformationList);

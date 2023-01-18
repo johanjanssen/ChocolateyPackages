@@ -25,6 +25,9 @@ import static java.lang.System.exit;
 public class UpdateServiceHelper {
     Logger logger = LoggerFactory.getLogger(UpdateServiceHelper.class);
 
+    @Value("${java.versions}")
+    private List<String> versions;
+
     @Value("${graalvm.latest.java}")
     String graalVMLatestJavaVersion;
 
@@ -40,27 +43,19 @@ public class UpdateServiceHelper {
         return releases;
     }
 
-    private void tagLoggingAndVerification(Map<String, String> tagMap, String vendor, int numberOfVersions) {
+    void tagLoggingAndVerification(Map<String, String> tagMap, String vendor) {
         logger.info("Used tags and corresponding Java versions for " + vendor + " :");
         tagMap.entrySet().forEach(entry -> {
             logger.info(entry.getKey() + " " + entry.getValue());
         });
 
-        if (tagMap.keySet().size() > numberOfVersions) {
+        if (tagMap.keySet().size() > versions.size()) {
             logger.error("Multiple tags for a version, unclear which one to use!");
             exit(0);
         }
     }
 
-    void tagLoggingAndVerificationSingleVersion(Map<String, String> tagMap, String vendor) {
-        tagLoggingAndVerification(tagMap, vendor, 1);
-    }
-
-    void tagLoggingAndVerificationMultipleVersions(Map<String, String> tagMap, String vendor, List<String> versions) {
-        tagLoggingAndVerification(tagMap, vendor, versions.size());
-    }
-
-    void changeChocolateyConfiguration(List<ChocolateyPackageInformation> chocolateyPackageInformationList, List<String> versions) throws IOException {
+    void changeChocolateyConfiguration(List<ChocolateyPackageInformation> chocolateyPackageInformationList) throws IOException {
         for (ChocolateyPackageInformation chocolateyPackageInformation : chocolateyPackageInformationList) {
             File file = new File("");
             File parentPath = file.getAbsoluteFile().getParentFile();

@@ -2,6 +2,7 @@ package com.chocolatey.updater;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Profile;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
@@ -19,6 +20,9 @@ import java.util.stream.Collectors;
 @Profile("liberica")
 public class LibericaUpdateService extends UpdateService {
     Logger logger = LoggerFactory.getLogger(LibericaUpdateService.class);
+
+    @Value("${liberica.versions}")
+    List<String> versions;
 
     Map<String, String> retrieveTagsForVersions(String repositoryName) {
         ResponseEntity<List<Release>> releases = updateServiceHelper.retrieveReleasesFromAPI(repositoryName);

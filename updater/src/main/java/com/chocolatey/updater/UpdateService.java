@@ -11,9 +11,6 @@ import java.util.List;
 public abstract class UpdateService {
     Logger logger = LoggerFactory.getLogger(UpdateService.class);
 
-    @Value("${java.versions}")
-    List<String> versions;
-
     @Autowired
     UpdateServiceHelper updateServiceHelper;
 

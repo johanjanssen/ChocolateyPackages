@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>libericajre</id>
-    <version>19.0.2</version>
+    <version>20.0.0</version>
     <packageSourceUrl>https://github.com/johanjanssen/ChocolateyPackages/tree/master/LibericaJRE</packageSourceUrl>
     <title>Liberica JRE</title>
     <authors>BellSoft</authors>

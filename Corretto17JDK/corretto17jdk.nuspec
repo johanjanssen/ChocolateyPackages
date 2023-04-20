@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>corretto17jdk</id>
-    <version>17.0.6</version>
+    <version>17.0.7</version>
     <packageSourceUrl>https://github.com/johanjanssen/ChocolateyPackages/tree/master/Corretto17JDK</packageSourceUrl>
     <title>Corretto 17 JDK</title>
     <authors>Amazon</authors>

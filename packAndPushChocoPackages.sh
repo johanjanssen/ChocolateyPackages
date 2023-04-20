@@ -55,14 +55,6 @@ cd ..
 # cd Microsoft-OpenJDK17 && choco pack && choco push && cd ..
 # cd mvndaemon && choco pack && choco push
 # cd ..
-cd ojdkbuild && choco pack && choco push
-cd ..
-cd ojdkbuild11 && choco pack && choco push
-cd ..
-cd ojdkbuild8 && choco pack && choco push
-cd ..
-cd ojdkbuild17 && choco pack && choco push
-cd ..
 # cd OpenJDK && choco pack && choco push
 # cd ..
 # cd OpenJDK8 && choco pack && choco push

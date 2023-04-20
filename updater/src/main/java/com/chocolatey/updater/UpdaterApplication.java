@@ -17,7 +17,7 @@ public class UpdaterApplication implements CommandLineRunner {
     @Autowired
     private List<UpdateService> updateServiceList;
 
-    // mvn spring-boot:run -Dspring-boot.run.profiles=liberica,ojdkbuild
+    // mvn spring-boot:run -Dspring-boot.run.profiles=liberica,sapmachine
     @Override
     public void run(String... args) throws Exception {
         for (UpdateService updateService : updateServiceList) {

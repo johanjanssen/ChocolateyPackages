@@ -1,5 +1,3 @@
-# cd AdoptOpenJDKJMC && choco pack && choco push
-# cd ..
 cd Corretto8JDK && choco pack && choco push
 cd ..
 cd Corretto8JRE && choco pack && choco push && 

@@ -57,16 +57,6 @@ cd ..
 # cd ..
 # cd OpenJDK && choco pack && choco push
 # cd ..
-# cd OpenJDK8 && choco pack && choco push
-# cd ..
-# cd OpenJDK8JRE && choco pack && choco push
-# cd ..
-# cd OpenJDK11 && choco pack && choco push
-# cd ..
-# cd OpenJDK11JRE && choco pack && choco push
-# cd ..
-cd OpenJDK17 && choco pack && choco push
-cd ..
 cd OracleJDK && choco pack && choco push
 cd ..
 cd Oracle17JDK && choco pack && choco push

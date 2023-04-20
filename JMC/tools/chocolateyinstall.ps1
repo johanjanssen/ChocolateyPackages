@@ -4,8 +4,8 @@ $toolsDir = (Split-Path -parent $MyInvocation.MyCommand.Definition)
 $packageArgs = @{
     PackageName      = $env:ChocolateyPackageName
     UnzipLocation    = $toolsDir
-    Url64bit         = 'https://download.java.net/java/GA/jmc8/13/binaries/jmc-8.0.0_windows-x64.zip'
-    Checksum64       = '866e3799162f90c230abdd1d0aa9ba82180603904dc6eea03b588732852241d8'
+    Url64bit         = 'https://download.java.net/java/GA/jmc8/05/binaries/jmc-8.3.1_windows-x64.zip'
+    Checksum64       = 'd924640fefbde15a30481141e94285f38e1183c01953d1d568ea3de248254b9d'
     ChecksumType64   = 'sha256'
 }
 

@@ -16,7 +16,7 @@ jobs:
       - name: Set API key
         env:
           CHOCOLATEY_API_KEY: ${{ secrets.CHOCOLATEY_API_KEY }}
-        run: choco apikey --key "$env:CHOCOLATEY_API_KEY" --source https://push.chocolatey.org/ CHOCOLATEY_API_KEY
+        run: choco apikey add -s="https://push.chocolatey.org/" -k="$env:CHOCOLATEY_API_KEY"
       - name: Push packages
         run: >
           cd ${{ github.event.inputs.directory }}; choco pack; choco push --source https://push.chocolatey.org/

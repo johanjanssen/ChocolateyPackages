@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>liberica17jrefull</id>
-    <version>17.0.7</version>
+    <version>17.0.8</version>
     <packageSourceUrl>https://github.com/johanjanssen/ChocolateyPackages/tree/master/Liberica17JREFull</packageSourceUrl>
     <title>Liberica 17 JRE full includes LibericaFX and Minimal VM</title>
     <authors>BellSoft</authors>

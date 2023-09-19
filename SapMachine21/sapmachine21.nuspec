@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
-    <id>sapmachine</id>
+    <id>sapmachine21</id>
     <version>21.0.0</version>
-    <packageSourceUrl>https://github.com/johanjanssen/ChocolateyPackages/tree/master/SapMachine</packageSourceUrl>
+    <packageSourceUrl>https://github.com/johanjanssen/ChocolateyPackages/tree/master/SapMachine21</packageSourceUrl>
     <title>SapMachine JDK</title>
     <authors>SAP</authors>
     <owners>JohanJanssen</owners>

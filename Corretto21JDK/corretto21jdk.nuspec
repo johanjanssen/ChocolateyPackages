@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
-    <id>correttojdk</id>
+    <id>corretto21jdk</id>
     <version>21.0.0</version>
-    <packageSourceUrl>https://github.com/johanjanssen/ChocolateyPackages/tree/master/CorrettoJDK</packageSourceUrl>
+    <packageSourceUrl>https://github.com/johanjanssen/ChocolateyPackages/tree/master/Corretto21JDK</packageSourceUrl>
     <title>Corretto JDK</title>
     <authors>Amazon</authors>
     <owners>JohanJanssen</owners>

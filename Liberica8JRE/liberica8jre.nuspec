@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>liberica8jre</id>
-    <version>8.0.382</version>
+    <version>8.0.392</version>
     <packageSourceUrl>https://github.com/johanjanssen/ChocolateyPackages/tree/master/Liberica8JDK</packageSourceUrl>
     <title>Liberica 8 JRE</title>
     <authors>BellSoft</authors>
